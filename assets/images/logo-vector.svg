@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="logoBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="logoSpine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="50%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Left Enclosing Crescent / Shield Arc -->
+  <path d="M 90 26 C 45 32 18 72 20 118 C 22 152 48 180 84 186 C 88 186 90 184 90 180 L 90 172 C 90 168 87 167 84 166 C 58 160 38 138 36 112 C 34 80 55 48 88 44 C 91 43 93 41 93 38 L 93 30 C 93 27 91 25 88 26 Z" 
+        fill="url(#logoBlue)"/>
+
+  <!-- Right Enclosing Crescent Arc -->
+  <path d="M 116 14 C 160 20 186 60 184 104 C 182 140 156 168 120 174 C 116 174 114 172 114 168 L 114 160 C 114 156 117 155 120 154 C 146 148 166 126 168 100 C 170 68 149 36 116 32 C 113 31 111 29 111 26 L 111 18 C 111 15 113 13 116 14 Z" 
+        fill="url(#logoBlue)"/>
+
+  <!-- Vertebrae Sequence (Anatomical Spine Column) -->
+  <!-- Vertebra 1 (Top) -->
+  <path d="M 85 45 C 85 41 89 38 94 38 L 110 38 C 115 38 119 41 119 45 L 123 55 C 124 57 122 60 119 60 L 85 60 C 82 60 80 57 81 55 Z" fill="url(#logoSpine)"/>
+  
+  <!-- Vertebra 2 -->
+  <path d="M 82 66 C 82 62 86 59 91 59 L 113 59 C 118 59 122 62 122 66 L 127 77 C 128 79 126 82 123 82 L 81 82 C 78 82 76 79 77 77 Z" fill="url(#logoSpine)"/>
+
+  <!-- Vertebra 3 (Center Prominent) -->
+  <path d="M 80 88 C 80 84 84 81 89 81 L 115 81 C 120 81 124 84 124 88 L 129 100 C 130 102 128 105 125 105 L 79 105 C 76 105 74 102 75 100 Z" fill="url(#logoSpine)"/>
+
+  <!-- Vertebra 4 -->
+  <path d="M 78 111 C 78 107 82 104 87 104 L 117 104 C 122 104 126 107 126 111 L 130 123 C 131 125 129 128 126 128 L 78 128 C 75 128 73 125 74 123 Z" fill="url(#logoSpine)"/>
+
+  <!-- Vertebra 5 -->
+  <path d="M 76 134 C 76 130 80 127 85 127 L 119 127 C 124 127 128 130 128 134 L 131 146 C 132 148 130 151 127 151 L 77 151 C 74 151 72 148 73 146 Z" fill="url(#logoSpine)"/>
+
+  <!-- Vertebra 6 (Base) -->
+  <path d="M 78 157 C 78 153 82 150 87 150 L 117 150 C 122 150 126 153 126 157 L 127 167 C 128 169 126 172 123 172 L 81 172 C 78 172 76 169 77 167 Z" fill="url(#logoSpine)"/>
+</svg>
