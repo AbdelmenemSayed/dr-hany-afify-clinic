@@ -3,193 +3,456 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>د. هاني محمد عفيفي | استشاري جراحة العظام والمفاصل والعمود الفقري</title>
-  <meta name="description" content="رعاية طبية وجراحية متقدمة لأمراض وجراحات العظام والمفاصل والعمود الفقري. د. هاني محمد عفيفي - دكتوراه جراحة العظام، استشاري أمراض وجراحة العظام.">
-  
+  <title>د. هاني محمد عفيفي | استشاري أمراض وجراحة العظام والمفاصل والعمود الفقري</title>
+  <meta name="description" content="الموقع الرسمي للعلامة الاستشارية الطبية لدكتور هاني محمد عفيفي، دكتوراه واستشاري جراحة العظام والمفاصل والعمود الفقري وإعادة بناء الأطراف.">
+
   <!-- Open Graph -->
   <meta property="og:title" content="د. هاني محمد عفيفي | استشاري جراحة العظام والمفاصل">
-  <meta property="og:description" content="رعاية متقدمة لعلاج أمراض وجراحات العظام والمفاصل. دكتوراه جراحة العظام.">
+  <meta property="og:description" content="رعاية استشارية متقدمة لعلاج أمراض وجراحات العظام والمفاصل والعمود الفقري.">
   <meta property="og:image" content="assets/images/dr-hany-afify.jpg">
-  
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
   <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon-192.png">
 
-  <!-- Bespoke Agency Stylesheet -->
+  <!-- Google Fonts: Cairo (Editorial Headings) & Tajawal (Humanist Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- New Design System Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Top Scroll Progress Line -->
-  <div class="scroll-progress-indicator" id="scrollProgress"></div>
+  <!-- Top Progress Indicator -->
+  <div class="scroll-tracer" id="scrollTracer"></div>
 
   <!-- ===================================================================
-       HEADER & NAVIGATION
+       GLOBAL EDITORIAL NAVIGATION
        =================================================================== -->
-  <header class="agency-header" id="agencyHeader">
-    <div class="container header-container">
-      <a href="#hero" class="brand-monogram">
-        <img src="assets/images/logo-cropped.png" alt="شعار د. هاني محمد عفيفي" class="brand-monogram-img">
-        <div class="brand-meta-info">
-          <span class="brand-doctor-title">د. هاني محمد عفيفي</span>
-          <span class="brand-sub-badge">استشاري جراحة العظام والمفاصل</span>
+  <header class="master-header" id="masterHeader">
+    <div class="header-inner">
+      <a href="#hero" class="brand-signature">
+        <img src="assets/images/logo-cropped.png" alt="شعار د. هاني محمد عفيفي" class="brand-emblem">
+        <div class="brand-text-block">
+          <span class="brand-name">د. هاني محمد عفيفي</span>
+          <span class="brand-credentials">دكتوراه واستشاري جراحة العظام</span>
         </div>
       </a>
 
-      <nav class="agency-nav" id="agencyNav">
-        <a href="#hero" class="agency-nav-link active">الرئيسية</a>
-        <a href="#philosophy" class="agency-nav-link">المكانة والفلسفة</a>
-        <a href="#theater" class="agency-nav-link">مسرح العلاجات المتقدمة</a>
-        <a href="#ilizarov-tech" class="agency-nav-link">الحالات المعقدة والإليزاروف</a>
-        <a href="#trust-pillars" class="agency-nav-link">ركائز الثقة</a>
-        <a href="#concierge" class="agency-nav-link">الحجز والاستشارة</a>
+      <nav class="master-nav" id="masterNav">
+        <a href="#hero" class="nav-anchor active">البداية</a>
+        <a href="#manifesto" class="nav-anchor">فلسفة الرعاية</a>
+        <a href="#chapters" class="nav-anchor">التخصصات الجراحية</a>
+        <a href="#ilizarov-chamber" class="nav-anchor">جهاز الإليزاروف</a>
+        <a href="#standards" class="nav-anchor">معايير العلاج</a>
+        <a href="#lounge" class="nav-anchor">حجز استشارة</a>
       </nav>
 
-      <div class="header-direct-action">
-        <a href="tel:0133273922" class="header-phone-quick">0133273922</a>
-        <a href="#concierge" class="btn-agency btn-agency-primary" style="padding: 0.7rem 1.8rem; font-size: 0.95rem;">احجز موعدك</a>
+      <div class="header-actions">
+        <a href="tel:0133273922" class="header-direct-phone" dir="ltr">0133273922</a>
+        <a href="#lounge" class="btn-luxe btn-luxe-primary">
+          <span>طلب استشارة</span>
+        </a>
       </div>
     </div>
   </header>
 
   <main>
     <!-- ===================================================================
-         1. CINEMATIC STUDIO HERO
+         SCENE 01: THE IMMERSIVE OVERTURE (HERO)
          =================================================================== -->
-    <section class="studio-hero-section" id="hero">
-      <!-- Ambient Depth Glow -->
-      <div class="ambient-scene-glow">
-        <div class="ambient-orb orb-hero-top"></div>
-        <div class="ambient-orb orb-hero-bottom"></div>
+    <section class="scene-overture" id="hero">
+      <div class="overture-ambient-backdrop">
+        <div class="ambient-glow-sphere sphere-primary"></div>
+        <div class="ambient-glow-sphere sphere-cyan"></div>
+        <div class="surgical-grid-mesh"></div>
       </div>
 
-      <div class="container">
-        <div class="studio-hero-grid">
-          <!-- Left: Narrative & Authority -->
-          <div class="hero-editorial-wrap">
-            <span class="hero-specialty-kicker">جراحة العظام والمفاصل والعمود الفقري</span>
-
-            <h1 class="hero-cinematic-title">
-              رعاية متقدمة لعلاج أمراض وجراحات العظام والمفاصل
-            </h1>
-
-            <div class="hero-authority-strip">
-              <div class="hero-surgeon-name">د. هاني محمد عفيفي</div>
-              <div class="hero-surgeon-doctorate">دكتوراه جراحة العظام</div>
-              <div class="hero-surgeon-post">استشاري أمراض وجراحة العظام والمفاصل</div>
-            </div>
-
-            <div class="hero-actions-suite">
-              <a href="#concierge" class="btn-agency btn-agency-primary">
-                احجز موعدك
-              </a>
-              <a href="https://wa.me/20133273922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D8%AF%D9%83%D8%AA%D9%88%D8%B1%20%D9%87%D8%A7%D9%86%D9%8A%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D9%85%D9%88%D8%B9%D8%AF%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9" target="_blank" rel="noopener noreferrer" class="btn-agency btn-agency-outline">
-                تواصل واتساب
-              </a>
-            </div>
+      <div class="content-container overture-layout">
+        <!-- Text Authority Column -->
+        <div class="overture-editorial-content">
+          <div class="prestige-tag reveal-init">
+            <span class="tag-pulse"></span>
+            <span>الاستشارات الطبية والجراحية المتقدمة</span>
           </div>
 
-          <!-- Right: Cinematic Portrait Canvas -->
-          <div class="hero-canvas-frame" id="heroCanvas">
-            <img src="assets/images/dr-hany-afify.jpg" alt="د. هاني محمد عفيفي استشاري جراحة العظام" class="hero-portrait-image">
+          <h1 class="overture-headline reveal-init">
+            رعاية استشارية متقدمة لعلاج أمراض وجراحات العظام والمفاصل
+          </h1>
+
+          <div class="doctor-prestige-card reveal-init">
+            <div class="prestige-name">د. هاني محمد عفيفي</div>
+            <div class="prestige-degree">دكتوراه جراحة العظام</div>
+            <div class="prestige-specialty">استشاري أمراض وجراحة العظام والمفاصل والعمود الفقري</div>
+          </div>
+
+          <p class="overture-lead-text reveal-init">
+            نجمع بين الخبرة الجراحية العميقة والتقنيات الإكلينيكية الحديثة لتوفير تشخيص سببي دقيق وحلول علاجية وجراحية متكاملة تعيد لمرضانا حرية الحركة بدون ألم.
+          </p>
+
+          <div class="overture-cta-row reveal-init">
+            <a href="#lounge" class="btn-luxe btn-luxe-primary">
+              <span>احجز كشفك الآن</span>
+            </a>
+            <a href="https://wa.me/20133273922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D8%AF%D9%83%D8%AA%D9%88%D8%B1%20%D9%87%D8%A7%D9%86%D9%8A%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D9%85%D9%88%D8%B9%D8%AF%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9" target="_blank" rel="noopener noreferrer" class="btn-luxe btn-luxe-secondary">
+              <span>محادثة واتساب مباشرة</span>
+            </a>
+          </div>
+
+          <!-- Micro Clinical Metrics -->
+          <div class="overture-metrics-bar reveal-init">
+            <div class="micro-metric">
+              <span class="metric-num">+15,000</span>
+              <span class="metric-lbl">حالة تم فحصها وعلاجها</span>
+            </div>
+            <div class="micro-metric-divider"></div>
+            <div class="micro-metric">
+              <span class="metric-num">+20</span>
+              <span class="metric-lbl">عاماً من الخبرة الجراحية</span>
+            </div>
+            <div class="micro-metric-divider"></div>
+            <div class="micro-metric">
+              <span class="metric-num">دكتوراه</span>
+              <span class="metric-lbl">أعلى درجة تخصصية معتمدة</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual Art Column -->
+        <div class="overture-visual-column reveal-init">
+          <div class="visual-portrait-chassis" id="portraitChassis">
+            <div class="portrait-halo"></div>
+            <img src="assets/images/dr-hany-afify.jpg" alt="د. هاني محمد عفيفي استشاري جراحة العظام والمفاصل" class="doctor-art-portrait">
+            
+            <div class="hud-status-badge">
+              <div class="hud-status-icon"></div>
+              <div class="hud-status-info">
+                <span class="hud-title">استشارات العظام والمفاصل</span>
+                <span class="hud-sub">بالميعاد المسبق | بنها - سنتر حجازي</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ===================================================================
-         ANIMATED TELEMETRY STRIP
+         SCENE 02: HUMAN MANIFESTO & PHILOSOPHY
          =================================================================== -->
-    <section class="telemetry-strip-section">
-      <div class="container">
-        <div class="telemetry-grid">
-          <!-- Metric 1 -->
-          <div class="telemetry-item reveal" data-reveal="fade-up">
-            <div class="telemetry-digit-row">
-              <span class="telemetry-digit counter" data-target="15000">0</span>
-              <span class="telemetry-plus">+</span>
-            </div>
-            <div class="telemetry-heading">حالة تم علاجها وتشخيصها</div>
-            <div class="telemetry-subtext">سجل إكلينيكي حافل في علاج أصعب مشاكل المفاصل والعظام</div>
+    <section class="scene-manifesto" id="manifesto">
+      <div class="content-container">
+        <div class="manifesto-card-grand reveal-on-scroll">
+          <div class="manifesto-header">
+            <span class="section-kicker">فلسفة الرعاية الطبية والأمانة المهنية</span>
+            <h2 class="manifesto-declaration">
+              «الطب رسالة إنسانية تسعى لاستعادة جودة الحياة، والجراحة ليست خطوة أولى بل قرار دقيق يُبنى على التشخيص السببي الصارم.»
+            </h2>
           </div>
 
-          <!-- Metric 2 -->
-          <div class="telemetry-item reveal delay-1" data-reveal="fade-up">
-            <div class="telemetry-digit-row">
-              <span class="telemetry-digit counter" data-target="98">0</span>
-              <span class="telemetry-plus">%</span>
-            </div>
-            <div class="telemetry-heading">نسبة استعادة الحركة والشفاء</div>
-            <div class="telemetry-subtext">خطط علاجية مخصصة تضمن أسرع عودة للحياة الطبيعية</div>
-          </div>
-
-          <!-- Metric 3 -->
-          <div class="telemetry-item reveal delay-2" data-reveal="fade-up">
-            <div class="telemetry-digit-row">
-              <span class="telemetry-digit counter" data-target="20">0</span>
-              <span class="telemetry-plus">+</span>
-            </div>
-            <div class="telemetry-heading">عاماً من الخبرة الجراحية</div>
-            <div class="telemetry-subtext">ممارسة استشارية متواصلة وفق المعايير الدولية المعتمدة</div>
-          </div>
-
-          <!-- Metric 4 -->
-          <div class="telemetry-item reveal delay-3" data-reveal="fade-up">
-            <div class="telemetry-digit-row">
-              <span class="telemetry-digit" style="font-size: clamp(2rem, 3vw, 2.7rem);">دكتوراه</span>
-            </div>
-            <div class="telemetry-heading">جراحة العظام والمفاصل</div>
-            <div class="telemetry-subtext">أعلى درجة أكاديمية وتخصصية في طب وجراحة الجهاز الحركي</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================================================================
-         2. CLINICAL PHILOSOPHY & AUTHORITY
-         =================================================================== -->
-    <section class="philosophy-section section-lounge" id="philosophy">
-      <div class="container">
-        <div class="philosophy-grid">
-          <div class="philosophy-visual-block reveal" data-reveal="scale-up">
-            <div class="philosophy-frame">
-              <img src="assets/images/dr-hany-afify.jpg" alt="د. هاني محمد عفيفي استشاري جراحة العظام والمفاصل">
-            </div>
-            <div class="philosophy-quote-hud reveal delay-2" data-reveal="fade-up">
-              <p class="philosophy-quote-text">
-                "التشخيص الطبي الدقيق ليس مجرد خطوة أولى، بل هو الركيزة التي تحدد مسار الشفاء الحقيقي وتجنب المريض التدخلات غير الضرورية."
+          <div class="manifesto-body-grid">
+            <div class="manifesto-narrative">
+              <p class="narrative-highlight">
+                في عيادة د. هاني محمد عفيفي، نؤمن بأن كل مريض يمثل حالة فريدة تتطلب استماعاً حقيقياً لشكواه، وفحصاً إكلينيكياً معمقاً للأربطة والمفاصل، وقراءة متأنية للأشعات التشخيصية للوصول إلى جذر الألم بدلاً من تسكين أعراضه مؤقتاً.
+              </p>
+              <p class="narrative-sub">
+                نولي أولوية قصوى لبروتوكولات العلاج التحفظي والتجديدي (مثل حقن البلازما الغنية بالصفائح والتردد الحراري) كلما أمكن الحفاظ على أنسجة ومفاصل المريض الطبيعية، ولا نتجه للتدخلات الجراحية إلا عندما تكون هي المسار المؤكد لاستعادة الوظيفة الحركية بالكامل وبأعلى معايير الأمان الدولية.
               </p>
             </div>
-          </div>
 
-          <div class="philosophy-narrative reveal delay-1" data-reveal="slide-left">
-            <span class="telemetry-chip">الخبرة والمكانة الطبية</span>
-            <h2 class="editorial-main-title">
-              مرجعية استشارية متخصصة في أدق جراحات العظام
+            <div class="manifesto-pillars-list">
+              <div class="pillar-row">
+                <div class="pillar-index">01</div>
+                <div class="pillar-text">
+                  <h4>التشخيص السببي المباشر</h4>
+                  <p>تحديد العوامل التشريحية والميكانيكية المسببة للاعتلال لتجنب تكرار الألم.</p>
+                </div>
+              </div>
+
+              <div class="pillar-row">
+                <div class="pillar-index">02</div>
+                <div class="pillar-text">
+                  <h4>التحفظ قبل التدخل الجراحي</h4>
+                  <p>استنفاد كافة الخيارات التجديدية والتحفظية المصممة لإنقاذ الغضاريف والمفاصل.</p>
+                </div>
+              </div>
+
+              <div class="pillar-row">
+                <div class="pillar-index">03</div>
+                <div class="pillar-text">
+                  <h4>الدقة الميكروية والمنظارية</h4>
+                  <p>استخدام أدق التقنيات المحدودة لتقليص مدة التعافي وتجنب شقوق الجراحة الكبيرة.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SCENE 03: THE EDITORIAL CLINICAL CHAPTERS
+         =================================================================== -->
+    <section class="scene-chapters" id="chapters">
+      <div class="content-container">
+        <!-- Section Lead Header -->
+        <div class="chapters-intro-header reveal-on-scroll">
+          <span class="section-kicker">التخصصات الجراحية والإكلينيكية المتقدمة</span>
+          <h2 class="chapters-main-title">حلول متكاملة لجميع أمراض وجراحات الجهاز الحركي</h2>
+          <p class="chapters-intro-desc">
+            نستعرض أدناه المحاور العلاجية الستة الكبرى التي تشرف عليها العيادة، متضمنة البروتوكولات التشخيصية والتدخلات الحديثة.
+          </p>
+        </div>
+
+        <!-- Chapter 01: Arthroplasty (Joint Replacement) -->
+        <article class="chapter-feature reveal-on-scroll">
+          <div class="chapter-visual-wrapper">
+            <img src="assets/images/joint-replacement.jpg" alt="جراحات المفاصل الصناعية للركبة والحوض" class="chapter-img">
+            <span class="chapter-badge">ARTHROPLASTY</span>
+          </div>
+          <div class="chapter-content-wrapper">
+            <div class="chapter-meta-line">
+              <span class="chapter-num">الفصل 01</span>
+              <span class="chapter-topic">جراحات المفاصل الصناعية</span>
+            </div>
+            <h3 class="chapter-title">استبدال مفاصل الركبة والحوض بأحدث التقنيات العالمية</h3>
+            <p class="chapter-description">
+              عند وصول تآكل الغضروف إلى مراحله النهائية وتأثر قدرة المريض على أداء أبسط المهام اليومية، تقدم العيادة جراحات استبدال المفاصل الكلية والجزئية باستخدام مفاصل صناعية متطورة مصنعة من سبائك التيتانيوم والبولي إيثيلين المعالج ليمنح المريض ثباتاً تاماً وعمراً افتراضياً طويلاً.
+            </p>
+            <div class="chapter-points-grid">
+              <div class="chapter-point-item">✓ استبدال مفصل الركبة الكلي والجزئي عالي الدقة</div>
+              <div class="chapter-point-item">✓ استبدال مفصل الحوض (الفخذ) مع الحفاظ على الأنسجة</div>
+              <div class="chapter-point-item">✓ برامج تأهيل حركي فورية بعد الجراحة</div>
+              <div class="chapter-point-item">✓ توازن ميكانيكي دقيق للمفصل لتفادي أي عرج</div>
+            </div>
+            <div class="chapter-action-box">
+              <a href="#lounge" class="btn-luxe btn-luxe-primary">حجز تقييم لحالات المفاصل الصناعية</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Chapter 02: Arthroscopy & Sports Medicine -->
+        <article class="chapter-feature chapter-reverse reveal-on-scroll">
+          <div class="chapter-visual-wrapper">
+            <img src="assets/images/arthroscopy.jpg" alt="مناظير المفاصل والرباط الصليبي وإصلاح الأربطة" class="chapter-img">
+            <span class="chapter-badge">MINIMALLY INVASIVE</span>
+          </div>
+          <div class="chapter-content-wrapper">
+            <div class="chapter-meta-line">
+              <span class="chapter-num">الفصل 02</span>
+              <span class="chapter-topic">مناظير المفاصل والطب الرياضي</span>
+            </div>
+            <h3 class="chapter-title">مناظير الركبة والكتف وإعادة بناء الأربطة الدقيقة</h3>
+            <p class="chapter-description">
+              تقنيات التدخل المحدود عبر المنظار الجراحي بأصغر شقوق ممكنة (أقل من نصف سنتيمتر)، مما يضمن الحفاظ على العضلات والأنسجة المحيطة بالمفصل وتقليل الألم بعد العملية مع تمكين الرياضيين والمرضى من سرعة العودة لأنشطتهم.
+            </p>
+            <div class="chapter-points-grid">
+              <div class="chapter-point-item">✓ إعادة بناء الرباط الصليبي الأمامي والخلفي (ACL/PCL)</div>
+              <div class="chapter-point-item">✓ خياطة وترميم الغضاريف الهلالية للركبة دون استئصال</div>
+              <div class="chapter-point-item">✓ إصلاح أوتار الكتف المدورة (Rotator Cuff) بالمنظار</div>
+              <div class="chapter-point-item">✓ علاج الخلع المتكرر لمفصل الكتف وتثبيت الحافظة</div>
+            </div>
+            <div class="chapter-action-box">
+              <a href="#lounge" class="btn-luxe btn-luxe-primary">استشارة مناظير المفاصل والرياضيين</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Chapter 03: Cartilage & Regenerative Medicine -->
+        <article class="chapter-feature reveal-on-scroll">
+          <div class="chapter-visual-wrapper">
+            <img src="assets/images/knee-joint.jpg" alt="علاج خشونة الركبة والمفاصل بالطب التجديدي" class="chapter-img">
+            <span class="chapter-badge">REGENERATIVE CARE</span>
+          </div>
+          <div class="chapter-content-wrapper">
+            <div class="chapter-meta-line">
+              <span class="chapter-num">الفصل 03</span>
+              <span class="chapter-topic">علاج خشونة المفاصل والطب التجديدي</span>
+            </div>
+            <h3 class="chapter-title">بروتوكولات حديثة للحفاظ على الغضاريف وتسكين آلام الخشونة</h3>
+            <p class="chapter-description">
+              الخشونة ليست حكماً نهائياً بالعجز أو الجراحة الفورية. نعتمد بروتوكولاً متكاملاً لعلاج درجات الخشونة المختلفة عبر تقنيات الحقن الموضعي التجديدي ومضادات الالتهاب الموجهة، لتعزيز مرونة المفصل وتجديد بيئته الحيوية وتغذية الغضروف.
+            </p>
+            <div class="chapter-points-grid">
+              <div class="chapter-point-item">✓ حقن البلازما الغنية بالصفائح المركزة (PRP)</div>
+              <div class="chapter-point-item">✓ حقن الهياليورونيك عالية النقاء لتزييت المفصل وتليينه</div>
+              <div class="chapter-point-item">✓ التردد الحراري التداخلي لتعطيل إشارات ألم العصب المفصلي</div>
+              <div class="chapter-point-item">✓ خطط تعديل الأحمال وبرامج تقوية العضلات الداعمة</div>
+            </div>
+            <div class="chapter-action-box">
+              <a href="#lounge" class="btn-luxe btn-luxe-primary">حجز موعد لعلاج خشونة المفاصل</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Chapter 04: Spine Surgery & Sciatica -->
+        <article class="chapter-feature chapter-reverse reveal-on-scroll">
+          <div class="chapter-visual-wrapper">
+            <img src="assets/images/spine-care.jpg" alt="جراحات العمود الفقري والانزلاق الغضروفي" class="chapter-img">
+            <span class="chapter-badge">SPINE PRECISION</span>
+          </div>
+          <div class="chapter-content-wrapper">
+            <div class="chapter-meta-line">
+              <span class="chapter-num">الفصل 04</span>
+              <span class="chapter-topic">جراحات العمود الفقري والانزلاق</span>
+            </div>
+            <h3 class="chapter-title">علاج الانزلاق الغضروفي وتوسيع القناة العصبية وعرق النسا</h3>
+            <p class="chapter-description">
+              التعامل مع آلام العمود الفقري يتطلب دقة جراحية متناهية لحماية الأعصاب وتخفيف الضغط الواقع على الجذور الشوكية. نقدم حلولاً جراحية وتحفظية دقيقة لاعتلالات الفقرات العنقية والقطنية وانزلاقات الغضاريف التي تسبب آلام الساقين أو الخدر والتنميل.
+            </p>
+            <div class="chapter-points-grid">
+              <div class="chapter-point-item">✓ استئصال الانزلاق الغضروفي القطني والعنقي الميكروسكوبي</div>
+              <div class="chapter-point-item">✓ توسيع القناة الشوكية وتحرير الأعصاب المضغوطة</div>
+              <div class="chapter-point-item">✓ تثبيت وتعديل انزلاق الفقرات بالشرائح الدقيقة</div>
+              <div class="chapter-point-item">✓ علاج متلازمة عرق النسا المزمن والآلام العصبية</div>
+            </div>
+            <div class="chapter-action-box">
+              <a href="#lounge" class="btn-luxe btn-luxe-primary">استشارة جراحات العمود الفقري</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Chapter 05: Complex Fractures & Non-Union Reconstruction -->
+        <article class="chapter-feature reveal-on-scroll">
+          <div class="chapter-visual-wrapper">
+            <img src="assets/images/complex-fractures.jpg" alt="علاج الكسور المعقدة وغير الملتئمة" class="chapter-img">
+            <span class="chapter-badge">TRAUMA RECONSTRUCTION</span>
+          </div>
+          <div class="chapter-content-wrapper">
+            <div class="chapter-meta-line">
+              <span class="chapter-num">الفصل 05</span>
+              <span class="chapter-topic">الكسور المعقدة وإعادة بناء الهيكل العظمي</span>
+            </div>
+            <h3 class="chapter-title">علاج الكسور المفتتة وغير الملتئمة وترميم العظام المستعصية</h3>
+            <p class="chapter-description">
+              خبرة إكلينيكية وجراحية متقدمة في التعامل مع إصابات الحوادث الكبرى والكسور التي فشل تثبيتها سابقاً أو نتج عنها عدم التئام عظمي (Non-union) أو التئام مشوه مصحوب بانحراف، مع استخدام أحدث أنظمة الشرائح التشريحية المقفلة والتثبيت الداخلي والخارجي.
+            </p>
+            <div class="chapter-points-grid">
+              <div class="chapter-point-item">✓ جراحات الكسور غير الملتئمة المزمنة وترقيع العظام</div>
+              <div class="chapter-point-item">✓ تثبيت الكسور المفتتة والقريبة من أسطح المفاصل</div>
+              <div class="chapter-point-item">✓ تصحيح الالتئام الخاطئ وتقويم زوايا الأطراف</div>
+              <div class="chapter-point-item">✓ علاج التهابات وتلوث العظام الناتجة عن عمليات سابقة</div>
+            </div>
+            <div class="chapter-action-box">
+              <a href="#lounge" class="btn-luxe btn-luxe-primary">تقييم حالات الكسور المعقدة</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Chapter 06: Pediatric Orthopedics & Deformity Correction -->
+        <article class="chapter-feature chapter-reverse reveal-on-scroll">
+          <div class="chapter-visual-wrapper">
+            <img src="assets/images/pediatric-ortho.jpg" alt="عظام الأطفال وتصحيح تشوهات الأطراف" class="chapter-img">
+            <span class="chapter-badge">PEDIATRIC CARE</span>
+          </div>
+          <div class="chapter-content-wrapper">
+            <div class="chapter-meta-line">
+              <span class="chapter-num">الفصل 06</span>
+              <span class="chapter-topic">عظام الأطفال وتشوهات النمو</span>
+            </div>
+            <h3 class="chapter-title">رعاية عظام الأطفال وتصحيح انحرافات وتقوس الأطراف</h3>
+            <p class="chapter-description">
+              أنسجة ومراكز نمو عظام الأطفال تحتاج إلى رعاية فائقة الحساسية لمنع أي تأثير دائم على طول الطرف أو اتزانه. نوفر حلولاً متخصصة لمشاكل المشي الولادية وتقوس الساقين والقدم المخلوبية بأساليب علاجية تحفظية وجراحية دقيقة تناسب كل مرحلة عمرية.
+            </p>
+            <div class="chapter-points-grid">
+              <div class="chapter-point-item">✓ تصحيح القدم المخلوبية (Clubfoot) بطريقة بونسيتي</div>
+              <div class="chapter-point-item">✓ علاج تقوس الساقين للداخل والخارج لدى الأطفال</div>
+              <div class="chapter-point-item">✓ الاكتشاف المبكر وعلاج خلع الورك الولادي (DDH)</div>
+              <div class="chapter-point-item">✓ متابعة وتثبيت كسور ألواح النمو العظمي الحساسة</div>
+            </div>
+            <div class="chapter-action-box">
+              <a href="#lounge" class="btn-luxe btn-luxe-primary">حجز كشف عظام الأطفال والتشوهات</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SCENE 04: THE ILIZAROV GRAND CHAMBER (SPECIAL IMMERSIVE SUITE)
+         =================================================================== -->
+    <section class="scene-ilizarov-chamber" id="ilizarov-chamber">
+      <div class="chamber-ambient-orbs">
+        <div class="chamber-orb chamber-orb-cyan"></div>
+        <div class="chamber-orb chamber-orb-blue"></div>
+      </div>
+
+      <div class="content-container">
+        <div class="chamber-grid">
+          <!-- Text Narrative Column -->
+          <div class="chamber-storytelling reveal-on-scroll">
+            <div class="chamber-chip">
+              <span class="chip-glow-dot"></span>
+              <span>هندسة بناء وتجديد العظام</span>
+            </div>
+
+            <h2 class="chamber-grand-title">
+              جهاز الإليزاروف وتصحيح التشوهات وتطويل العظام
             </h2>
-            <p class="narrative-lead">
-              يجمع د. هاني محمد عفيفي بين الدرجة الأكاديمية الرفيعة (دكتوراه جراحة العظام) والخبرة الإكلينيكية والجراحية الواسعة في كبرى المراكز الطبية.
-            </p>
-            <p class="narrative-body">
-              تعتمد فلسفتنا الطبية على تقديم حلول علاجية متكاملة تبدأ بالتقييم الإكلينيكي المعمق والفحص الشعاعي المتقدم، واختيار العلاج التحفظي والتجديدي كلما أمكن، مع اللجوء إلى التدخل الجراحي الدقيق والمنظاري كخيار حاسم للحالات التي تتطلب ذلك وفق المعايير الدولية المعتمدة.
+
+            <p class="chamber-lead">
+              تُعد جراحات الإليزاروف (Ilizarov Technique) أحد أدق فروع جراحة العظام الترميمية، حيث يتم تسخير قدرة الجسم الطبيعية على توليد أنسجة عظمية جديدة لسد الفجوات الكبرى وتعديل الانحرافات المعقدة.
             </p>
 
-            <div class="pillars-row">
-              <div class="pillar-col">
-                <span class="pillar-num">01 / DIAGNOSIS</span>
-                <h4 class="pillar-title">التشخيص السببي</h4>
-                <p class="pillar-desc">تحديد المنشأ الحقيقي للألم والاعتلال المفصلي بدلاً من الاكتفاء بالمسكنات المؤقتة.</p>
+            <p class="chamber-body">
+              يمتلك د. هاني محمد عفيفي خبرة استشارية متخصصة وممتدة في تركيب ومتابعة أجهزة الإليزاروف الحلقية الخارجية الدقيقة، لعلاج الحالات المستعصية المحولة من مختلف المحافظات والتي استنفدت كافة الحلول الجراحية التقليدية.
+            </p>
+
+            <!-- Chamber Feature Highlights -->
+            <div class="chamber-cards-array">
+              <div class="chamber-card">
+                <span class="chamber-card-tag">BONE REGENERATION</span>
+                <h4>توليد العظام وسد الفجوات</h4>
+                <p>تعويض الأجزاء العظمية المفقودة جراء الحوادث أو استئصال الالتهابات المزمنة دون الحاجة لترقيع ضخم.</p>
               </div>
 
-              <div class="pillar-col">
-                <span class="pillar-num">02 / PRECISION</span>
-                <h4 class="pillar-title">الدقة الجراحية</h4>
-                <p class="pillar-desc">تطبيق تقنيات التدخل المحدود ومناظير المفاصل لضمان استشفاء أسرع وأعلى درجات الأمان.</p>
+              <div class="chamber-card">
+                <span class="chamber-card-tag">DEFORMITY CORRECTION</span>
+                <h4>تصحيح التشوهات المعقدة</h4>
+                <p>تقويم الانحناءات الشديدة في الأطراف وتعديل زوايا المفاصل بانسيابية هندسية تدريجية.</p>
+              </div>
+
+              <div class="chamber-card">
+                <span class="chamber-card-tag">LIMB LENGTHENING</span>
+                <h4>تطويل الأطراف وتعديل القصر</h4>
+                <p>علاج حالات قصر الساقين وتفاوت الأطوال الناتج عن إصابات الطفولة أو العيوب الخلقية بمعدل ميكروي آمن.</p>
+              </div>
+
+              <div class="chamber-card">
+                <span class="chamber-card-tag">NON-UNION CURE</span>
+                <h4>علاج عدم الالتئام المستعصي</h4>
+                <p>تحفيز التروية الدموية وتنشيط خلايا الالتئام العظمي في الكسور المفتتة الميؤوس من شفائها تقليدياً.</p>
               </div>
             </div>
 
-            <div>
-              <a href="#concierge" class="btn-agency btn-agency-primary">حجز استشارة خاصة</a>
+            <div class="chamber-cta-wrap">
+              <a href="#lounge" class="btn-luxe btn-luxe-cyan">
+                <span>طلب استشارة لحالات الإليزاروف والتشوهات المعقدة</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Technical Schematic Visual Column -->
+          <div class="chamber-schematic-column reveal-on-scroll">
+            <div class="schematic-canvas">
+              <div class="schematic-grid-line"></div>
+              <img src="assets/images/ilizarov-vector.svg" alt="رسم تخطيطي لجهاز الإليزاروف وبناء العظام" class="schematic-vector-img">
+              
+              <div class="schematic-hud-annotation annotation-top">
+                <span class="hud-marker"></span>
+                <span>الحلقات التيتانيوم الدائرية للتثبيت</span>
+              </div>
+
+              <div class="schematic-hud-annotation annotation-mid">
+                <span class="hud-marker"></span>
+                <span>أسلاك الشد الهندسية لحماية الأعصاب</span>
+              </div>
+
+              <div class="schematic-hud-annotation annotation-bottom">
+                <span class="hud-marker"></span>
+                <span>محاور الإطالة والتحريك الميكروي (1 مم/يوم)</span>
+              </div>
             </div>
           </div>
         </div>
@@ -197,410 +460,150 @@
     </section>
 
     <!-- ===================================================================
-         3. INTERACTIVE TREATMENT THEATER
+         SCENE 05: STANDARDS OF CARE & PATIENT JOURNEY
          =================================================================== -->
-    <section class="treatment-theater-section section-lounge" id="theater">
-      <div class="container">
-        <div class="editorial-lead-group reveal" data-reveal="fade-up">
-          <span class="telemetry-chip">العلاجات التخصصية المتقدمة</span>
-          <h2 class="editorial-main-title">مسرح العلاجات والحلول الجراحية</h2>
-          <p class="editorial-lead-desc">
-            اضغط على أي تخصص لاستعراض التجهيزات الطبية والبروتوكول العلاجي المتبع في العيادة.
+    <section class="scene-standards" id="standards">
+      <div class="content-container">
+        <div class="standards-lead-header reveal-on-scroll">
+          <span class="section-kicker">معايير الرعاية الدولية</span>
+          <h2 class="standards-main-title">مسار رحلة المريض في عيادتنا</h2>
+          <p class="standards-lead-desc">
+            خطوات ممنهجة مصممة لضمان راحة المريض وسلامته وتحقيق أعلى معدلات النجاح والتعافي.
           </p>
         </div>
 
-        <div class="theater-layout">
-          <!-- Master Tabs Menu -->
-          <div class="theater-menu-column reveal delay-1" data-reveal="slide-right">
-            <!-- Tab 1 -->
-            <div class="theater-tab-item active" data-pane="pane-knee">
-              <div class="tab-meta-left">
-                <span class="tab-category-tag">REGENERATIVE & PAIN</span>
-                <span class="tab-procedure-name">علاج خشونة الركبة والمفاصل</span>
-              </div>
-              <span class="tab-arrow-indicator">&larr;</span>
-            </div>
-
-            <!-- Tab 2 -->
-            <div class="theater-tab-item" data-pane="pane-joints">
-              <div class="tab-meta-left">
-                <span class="tab-category-tag">ARTHROPLASTY</span>
-                <span class="tab-procedure-name">المفاصل الصناعية (ركبة وحوض)</span>
-              </div>
-              <span class="tab-arrow-indicator">&larr;</span>
-            </div>
-
-            <!-- Tab 3 -->
-            <div class="theater-tab-item" data-pane="pane-arthroscopy">
-              <div class="tab-meta-left">
-                <span class="tab-category-tag">MINIMALLY INVASIVE</span>
-                <span class="tab-procedure-name">مناظير الركبة والكتف وإصلاح الأربطة</span>
-              </div>
-              <span class="tab-arrow-indicator">&larr;</span>
-            </div>
-
-            <!-- Tab 4 -->
-            <div class="theater-tab-item" data-pane="pane-spine">
-              <div class="tab-meta-left">
-                <span class="tab-category-tag">SPINE SURGERY</span>
-                <span class="tab-procedure-name">جراحات العمود الفقري والانزلاق</span>
-              </div>
-              <span class="tab-arrow-indicator">&larr;</span>
-            </div>
-
-            <!-- Tab 5 -->
-            <div class="theater-tab-item" data-pane="pane-fractures">
-              <div class="tab-meta-left">
-                <span class="tab-category-tag">RECONSTRUCTION</span>
-                <span class="tab-procedure-name">علاج الكسور المعقدة وغير الملتئمة</span>
-              </div>
-              <span class="tab-arrow-indicator">&larr;</span>
-            </div>
-
-            <!-- Tab 6 -->
-            <div class="theater-tab-item" data-pane="pane-pediatric">
-              <div class="tab-meta-left">
-                <span class="tab-category-tag">PEDIATRIC CARE</span>
-                <span class="tab-procedure-name">عظام الأطفال وتشوهات الأطراف</span>
-              </div>
-              <span class="tab-arrow-indicator">&larr;</span>
-            </div>
-          </div>
-
-          <!-- Dynamic Detail Theater Screen -->
-          <div class="theater-screen-column reveal delay-2" data-reveal="fade-up">
-            <!-- Pane 1: Knee -->
-            <div class="theater-pane active-pane" id="pane-knee">
-              <div class="pane-media-view">
-                <img src="assets/images/knee-joint.jpg" alt="علاج خشونة الركبة والمفاصل">
-              </div>
-              <div class="pane-content-view">
-                <span class="pane-index-label">SPECIALTY 01 / ARTHRITIS CARE</span>
-                <h3 class="pane-title">علاج خشونة الركبة والمفاصل المتقدم</h3>
-                <p class="pane-description">
-                  نقدم بروتوكولات استشارية تبدأ بتقييم درجات التآكل عبر الأشعة المتقدمة، وتطبيق حلول تحفظية وتجديدية دقيقة تشمل حقن البلازما الغنية بالصفائح (PRP)، حقن الهياليورونيك عالية التركيز لتزييت وتغذية الغضروف، والتردد الحراري لتعطيل إشارات الألم وإعادة الحركة السلسة للمفصل.
-                </p>
-                <div class="pane-tags-row">
-                  <span class="pane-pill">حقن البلازما PRP</span>
-                  <span class="pane-pill">حقن الهياليورونيك</span>
-                  <span class="pane-pill">التردد الحراري التداخلي</span>
-                  <span class="pane-pill">تقييم درجات الخشونة</span>
-                </div>
-                <div class="pane-cta-wrap">
-                  <a href="#concierge" class="btn-agency btn-agency-primary" style="padding: 0.85rem 2rem; font-size: 0.95rem;">
-                    حجز استشارة لحالات الركبة والمفاصل
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Pane 2: Joints -->
-            <div class="theater-pane" id="pane-joints">
-              <div class="pane-media-view">
-                <img src="assets/images/joint-replacement.jpg" alt="المفاصل الصناعية">
-              </div>
-              <div class="pane-content-view">
-                <span class="pane-index-label">SPECIALTY 02 / ARTHROPLASTY</span>
-                <h3 class="pane-title">جراحات استبدال المفاصل الصناعية</h3>
-                <p class="pane-description">
-                  جراحات دقيقة لاستبدال مفاصل الركبة والحوض التالفة بأحدث المفاصل العالمية المصنعة من سبائك التيتانيوم ومواد البولي إيثيلين فائقة المتانة، لضمان ثبات كامل واستعادة فورية للمشي الخالي من الألم مع برنامج تأهيلي سريع.
-                </p>
-                <div class="pane-tags-row">
-                  <span class="pane-pill">تغيير مفصل الركبة الكلي والجزئي</span>
-                  <span class="pane-pill">تغيير مفصل الحوض (الفخذ)</span>
-                  <span class="pane-pill">مفاصل عالمية متطورة</span>
-                  <span class="pane-pill">تأهيل حركي سريع</span>
-                </div>
-                <div class="pane-cta-wrap">
-                  <a href="#concierge" class="btn-agency btn-agency-primary" style="padding: 0.85rem 2rem; font-size: 0.95rem;">
-                    حجز استشارة المفاصل الصناعية
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Pane 3: Arthroscopy -->
-            <div class="theater-pane" id="pane-arthroscopy">
-              <div class="pane-media-view">
-                <img src="assets/images/arthroscopy.jpg" alt="مناظير الركبة والكتف">
-              </div>
-              <div class="pane-content-view">
-                <span class="pane-index-label">SPECIALTY 03 / ARTHROSCOPY</span>
-                <h3 class="pane-title">مناظير المفاصل وإصلاح الأربطة الدقيقة</h3>
-                <p class="pane-description">
-                  جراحات تداخلية ميكروية بأصغر شقوق جراحية، تتضمن إعادة بناء الرباط الصليبي (ACL)، خياطة وترميم الغضاريف الهلالية للركبة، وإصلاح أوتار مفصل الكتف المتيبسة، مع عودة قياسية وسريعة لممارسة الرياضة والحياة الطبيعية.
-                </p>
-                <div class="pane-tags-row">
-                  <span class="pane-pill">إصلاح الرباط الصليبي ACL</span>
-                  <span class="pane-pill">خياطة غضاريف الركبة</span>
-                  <span class="pane-pill">مناظير مفصل الكتف</span>
-                  <span class="pane-pill">جراحة اليوم الواحد</span>
-                </div>
-                <div class="pane-cta-wrap">
-                  <a href="#concierge" class="btn-agency btn-agency-primary" style="padding: 0.85rem 2rem; font-size: 0.95rem;">
-                    حجز استشارة مناظير المفاصل
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Pane 4: Spine -->
-            <div class="theater-pane" id="pane-spine">
-              <div class="pane-media-view">
-                <img src="assets/images/spine-care.jpg" alt="جراحات العمود الفقري">
-              </div>
-              <div class="pane-content-view">
-                <span class="pane-index-label">SPECIALTY 04 / SPINE SURGERY</span>
-                <h3 class="pane-title">جراحات العمود الفقري والانزلاق الغضروفي</h3>
-                <p class="pane-description">
-                  علاج متقدم لآلام الظهر والرقبة واعتلالات الفقرات العنقية والقطنية، وعمليات رفع الضغط عن الأعصاب وتوسيع القناة الشوكية بدقة ميكروسكوبية تحمي الحبل الشوكي وتستأصل الغضروف المسبب للضغط دون مساس بالاتزان الحركي.
-                </p>
-                <div class="pane-tags-row">
-                  <span class="pane-pill">الانزلاق الغضروفي القطني والعنقي</span>
-                  <span class="pane-pill">توسيع القناة العصبية</span>
-                  <span class="pane-pill">علاج متلازمة عرق النسا</span>
-                  <span class="pane-pill">تثبيت وتثبيت الفقرات</span>
-                </div>
-                <div class="pane-cta-wrap">
-                  <a href="#concierge" class="btn-agency btn-agency-primary" style="padding: 0.85rem 2rem; font-size: 0.95rem;">
-                    حجز استشارة العمود الفقري
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Pane 5: Fractures -->
-            <div class="theater-pane" id="pane-fractures">
-              <div class="pane-media-view">
-                <img src="assets/images/complex-fractures.jpg" alt="علاج الكسور المعقدة">
-              </div>
-              <div class="pane-content-view">
-                <span class="pane-index-label">SPECIALTY 05 / TRAUMA & RECONSTRUCTION</span>
-                <h3 class="pane-title">علاج الكسور المعقدة وإعادة بناء العظام</h3>
-                <p class="pane-description">
-                  التعامل الطبي الجراحي المتقدم مع الكسور المفتتة الناتجة عن الحوادث الكبرى، والكسور غير الملتئمة (Non-union) أو الملتئمة بانحراف وتشوه، مع تطبيق تقنيات ترقيع وإعادة البناء وتثبيت العظام بأحدث الشرائح والمسامير التيتانيوم.
-                </p>
-                <div class="pane-tags-row">
-                  <span class="pane-pill">الكسور غير الملتئمة (Non-Union)</span>
-                  <span class="pane-pill">الكسور المفتوحة والمفتتة</span>
-                  <span class="pane-pill">إعادة بناء الهيكل العظمي</span>
-                  <span class="pane-pill">تثبيت متطور عالي الثبات</span>
-                </div>
-                <div class="pane-cta-wrap">
-                  <a href="#concierge" class="btn-agency btn-agency-primary" style="padding: 0.85rem 2rem; font-size: 0.95rem;">
-                    حجز استشارة الكسور المعقدة
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Pane 6: Pediatric -->
-            <div class="theater-pane" id="pane-pediatric">
-              <div class="pane-media-view">
-                <img src="assets/images/pediatric-ortho.jpg" alt="عظام الأطفال">
-              </div>
-              <div class="pane-content-view">
-                <span class="pane-index-label">SPECIALTY 06 / PEDIATRIC ORTHOPEDICS</span>
-                <h3 class="pane-title">عظام الأطفال وتصحيح تشوهات الأطراف</h3>
-                <p class="pane-description">
-                  رعاية فائقة الحساسية لمراكز نمو عظام الأطفال والمواليد، تشمل علاج وتصحيح القدم المخلوبية (Clubfoot)، تقوس الساقين للداخل والخارج (Bowlegs)، تشوهات مفصل الفخذ الولادي، والكسور التي تصيب ألواح النمو العظمي.
-                </p>
-                <div class="pane-tags-row">
-                  <span class="pane-pill">القدم المخلوبية (Clubfoot)</span>
-                  <span class="pane-pill">تقوس الساقين عند الأطفال</span>
-                  <span class="pane-pill">كسور مراكز النمو</span>
-                  <span class="pane-pill">خلع الورك الولادي</span>
-                </div>
-                <div class="pane-cta-wrap">
-                  <a href="#concierge" class="btn-agency btn-agency-primary" style="padding: 0.85rem 2rem; font-size: 0.95rem;">
-                    حجز استشارة عظام الأطفال
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================================================================
-         4. SPECIAL IMMERSIVE SECTION: ILIZAROV & COMPLEX CASES
-         =================================================================== -->
-    <section class="ilizarov-immersive-section section-lounge" id="ilizarov-tech">
-      <div class="container">
-        <div class="immersive-grid">
-          <div class="reveal" data-reveal="slide-right">
-            <span class="telemetry-chip" style="color: var(--electric-cyan);">هندسة بناء وتجديد العظام</span>
-            <h2 class="editorial-main-title light">خبرة رائدة في جهاز الإليزاروف والحالات المعقدة</h2>
-            <p class="editorial-lead-desc light">
-              تستقبل العيادة أصعب الحالات المستعصية المحولة من مختلف المحافظات، حيث نطبق تقنية جهاز الإليزاروف الحلقي الخارجي لتوليد أنسجة عظمية جديدة وتصحيح التشوهات وتعديل أطوال الأطراف بدقة هندسية وجراحية فائقة.
+        <div class="journey-track-grid">
+          <!-- Step 1 -->
+          <div class="journey-step-card reveal-on-scroll">
+            <div class="step-num-bubble">01</div>
+            <h3 class="step-title">الفحص والتقييم المعمق</h3>
+            <p class="step-description">
+              جلسة استشارية غير متعجلة للاستماع لكافة تفاصيل الألم وتاريخ الحالة، يتبعها فحص حركي واختبارات سريرية مخصصة للأربطة والمفاصل.
             </p>
-
-            <div class="immersive-cases-list">
-              <div class="immersive-case-card reveal delay-1" data-reveal="fade-up">
-                <div class="case-hud-tag">NON-UNION RECONSTRUCTION</div>
-                <h4 class="case-hud-name">الكسور غير الملتئمة</h4>
-                <p class="case-hud-desc">حلول جراحية نوعية لحالات عدم الالتئام المزمن وفقدان الأنسجة العظمية.</p>
-              </div>
-
-              <div class="immersive-case-card reveal delay-2" data-reveal="fade-up">
-                <div class="case-hud-tag">DEFORMITY CORRECTION</div>
-                <h4 class="case-hud-name">تصحيح تشوهات العظام</h4>
-                <p class="case-hud-desc">تقويم الانحرافات الشديدة وتعديل زوايا المفاصل والأطراف المعوجة.</p>
-              </div>
-
-              <div class="immersive-case-card reveal delay-1" data-reveal="fade-up">
-                <div class="case-hud-tag">LIMB LENGTHENING</div>
-                <h4 class="case-hud-name">تطويل وتعديل أطوال الأطراف</h4>
-                <p class="case-hud-desc">علاج قصر الأطراف وتفاوت أطوال الساقين بحلول استطالة تدريجية آمنة.</p>
-              </div>
-
-              <div class="immersive-case-card reveal delay-2" data-reveal="fade-up">
-                <div class="case-hud-tag">ADVANCED SOLUTIONS</div>
-                <h4 class="case-hud-name">الحالات المستعصية</h4>
-                <p class="case-hud-desc">إنقاذ وإعادة بناء الأطراف في الحالات التي استنفدت الحلول الجراحية التقليدية.</p>
-              </div>
-            </div>
           </div>
 
-          <div class="reveal delay-2" data-reveal="scale-up">
-            <div class="schematic-visual-container">
-              <img src="assets/images/ilizarov-vector.svg" alt="جهاز الإليزاروف وبناء وتطويل العظام">
-            </div>
+          <!-- Step 2 -->
+          <div class="journey-step-card reveal-on-scroll">
+            <div class="step-num-bubble">02</div>
+            <h3 class="step-title">الدراسة الشعاعية والمخبرية</h3>
+            <p class="step-description">
+              قراءة دقيقة لصور الرنين المغناطيسي والأشعات السينية الحديثة لتحديد درجة الإصابة التشريحية والاطمئنان على سلامة الأنسجة الحيوية.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="journey-step-card reveal-on-scroll">
+            <div class="step-num-bubble">03</div>
+            <h3 class="step-title">الخطة العلاجية المخصصة</h3>
+            <p class="step-description">
+              وضع بروتوكول فردي يناسب سن المريض ومستوى نشاطه اليومي والرياضي، سواء عبر التدخلات التحفظية الحديثة أو الجراحة الدقيقة.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="journey-step-card reveal-on-scroll">
+            <div class="step-num-bubble">04</div>
+            <h3 class="step-title">المتابعة والتأهيل الحركي</h3>
+            <p class="step-description">
+              إشراف مباشر ومستمر خلال فترة النقاهة مع برنامج تأهيل حركي تدريجي لضمان استعادة كامل قوة المفصل والعودة السلسة لممارسة الحياة.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ===================================================================
-         5. PATIENT TRUST ARCHITECTURE
+         SCENE 06: PRIVATE CONSULTATION LOUNGE (BOOKING & CONTACT)
          =================================================================== -->
-    <section class="trust-architecture-section section-lounge" id="trust-pillars">
-      <div class="container">
-        <div class="editorial-lead-group center reveal" data-reveal="fade-up">
-          <span class="telemetry-chip">معايير الثقة والتميز</span>
-          <h2 class="editorial-main-title">لماذا يختار المرضى عيادة د. هاني عفيفي؟</h2>
-          <p class="editorial-lead-desc">
-            ركائز أساسية تبني الثقة وتضمن أعلى جودة رعاية طبية ونتائج جراحية مستدامة.
+    <section class="scene-lounge" id="lounge">
+      <div class="content-container">
+        <div class="lounge-lead-header reveal-on-scroll">
+          <span class="section-kicker">جناح الحجز والاستشارة الخاصة</span>
+          <h2 class="lounge-main-title">احجز موعد كشفك الاستشاري</h2>
+          <p class="lounge-lead-desc">
+            يرجى إرسال بيانات الحجز عبر الاستمارة أدناه لتأكيد الموعد المناسب لراحتكم، أو الاتصال المباشر بهاتف العيادة.
           </p>
         </div>
 
-        <div class="trust-pillars-quad">
-          <div class="trust-pillar-card reveal delay-1" data-reveal="fade-up">
-            <span class="pillar-ordinal">01</span>
-            <h3 class="pillar-headline">التشخيص الدقيق أولاً</h3>
-            <p class="pillar-explanation">فحص إكلينيكي مفصل وقراءة متأنية للأشعة لتحديد سبب المشكلة الجذري قبل اتخاذ أي قرار علاجي.</p>
-          </div>
+        <div class="lounge-suite-grid">
+          <!-- Booking Form Card -->
+          <div class="lounge-form-card reveal-on-scroll">
+            <form class="bespoke-booking-form" id="bespokeBookingForm">
+              <div class="form-group-duo">
+                <div class="form-field-unit">
+                  <label for="form_name" class="field-label">اسم المريض بالكامل *</label>
+                  <input type="text" id="form_name" name="patient_name" class="field-input" placeholder="اكتب اسم المريض" required>
+                </div>
 
-          <div class="trust-pillar-card reveal delay-2" data-reveal="fade-up">
-            <span class="pillar-ordinal">02</span>
-            <h3 class="pillar-headline">خطة علاجية مخصصة</h3>
-            <p class="pillar-explanation">خطة مفصلة تراعي سن المريض، درجة الإصابة، ونشاطه اليومي والرياضي دون قوالب علاجية جاهزة.</p>
-          </div>
-
-          <div class="trust-pillar-card reveal delay-3" data-reveal="fade-up">
-            <span class="pillar-ordinal">03</span>
-            <h3 class="pillar-headline">خبرة في الحالات المعقدة</h3>
-            <p class="pillar-explanation">كفاءة استشارية مثبتة في إجراء الجراحات الدقيقة ومعالجة الكسور المستعصية وتقنيات الإليزاروف.</p>
-          </div>
-
-          <div class="trust-pillar-card reveal delay-4" data-reveal="fade-up">
-            <span class="pillar-ordinal">04</span>
-            <h3 class="pillar-headline">متابعة مستمرة وتأهيل</h3>
-            <p class="pillar-explanation">رعاية إكلينيكية متواصلة وإشراف مباشر خلال مرحلة التعافي لضمان استعادة كامل القدرة الحركية.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================================================================
-         6. PRIVATE CONCIERGE BOOKING & SUITE
-         =================================================================== -->
-    <section class="concierge-booking-section section-lounge" id="concierge">
-      <div class="container">
-        <div class="editorial-lead-group reveal" data-reveal="fade-up">
-          <span class="telemetry-chip">الحجز والاستشارة الاستشارية</span>
-          <h2 class="editorial-main-title">احجز موعد كشفك الاستشاري</h2>
-          <p class="editorial-lead-desc">
-            أرسل طلب الحجز المسبق عبر الاستمارة أدناه، أو اتصل مباشرة بفريق الاستقبال لتأكيد الموعد المناسب لراحتك.
-          </p>
-        </div>
-
-        <div class="concierge-suite-layout">
-          <!-- Form Enclosure -->
-          <div class="concierge-form-enclosure reveal delay-1" data-reveal="fade-up">
-            <form class="concierge-form" id="conciergeBookingForm">
-              <div class="concierge-field-unit">
-                <label class="concierge-field-label" for="c_name">اسم المريض بالكامل *</label>
-                <input type="text" id="c_name" name="patient_name" class="concierge-field-input" placeholder="اكتب اسم المريض" required>
+                <div class="form-field-unit">
+                  <label for="form_phone" class="field-label">رقم الهاتف المحمول *</label>
+                  <input type="tel" id="form_phone" name="patient_phone" class="field-input" placeholder="010xxxxxxxx" dir="ltr" required>
+                </div>
               </div>
 
-              <div class="concierge-field-unit">
-                <label class="concierge-field-label" for="c_phone">رقم الهاتف المحمول *</label>
-                <input type="tel" id="c_phone" name="patient_phone" class="concierge-field-input" placeholder="010xxxxxxxx" dir="ltr" required>
+              <div class="form-group-duo">
+                <div class="form-field-unit">
+                  <label for="form_service" class="field-label">التخصص أو الشكوى المطلوبة</label>
+                  <select id="form_service" name="service_choice" class="field-input">
+                    <option value="علاج خشونة الركبة والمفاصل">علاج خشونة الركبة والمفاصل (حقن بلازما / تردد حراري)</option>
+                    <option value="جراحات المفاصل الصناعية">المفاصل الصناعية (ركبة / فخذ)</option>
+                    <option value="مناظير الركبة والكتف">مناظير المفاصل والرباط الصليبي</option>
+                    <option value="جراحات العمود الفقري">جراحات العمود الفقري والانزلاق الغضروفي</option>
+                    <option value="علاج الكسور المعقدة">علاج الكسور المعقدة وغير الملتئمة</option>
+                    <option value="جهاز الإليزاروف وتطويل العظام">جهاز الإليزاروف وتصحيح التشوهات وتطويل العظام</option>
+                    <option value="عظام الأطفال والتشوهات">عظام الأطفال وتقوس الساقين والقدم المخلوبية</option>
+                    <option value="استشارة عظام عامة">استشارة عامة في جراحة العظام والمفاصل</option>
+                  </select>
+                </div>
+
+                <div class="form-field-unit">
+                  <label for="form_date" class="field-label">الموعد المقترح</label>
+                  <input type="date" id="form_date" name="target_date" class="field-input">
+                </div>
               </div>
 
-              <div class="concierge-field-unit">
-                <label class="concierge-field-label" for="c_service">الخدمة أو التخصص المطلوب</label>
-                <select id="c_service" name="service_type" class="concierge-field-input">
-                  <option value="علاج خشونة الركبة والمفاصل">علاج خشونة الركبة والمفاصل (حقن بلازما / تردد حراري)</option>
-                  <option value="جراحات المفاصل الصناعية">المفاصل الصناعية (ركبة / فخذ)</option>
-                  <option value="مناظير الركبة والكتف">مناظير المفاصل والرباط الصليبي</option>
-                  <option value="جراحات العمود الفقري">جراحات العمود الفقري والانزلاق الغضروفي</option>
-                  <option value="علاج الكسور المعقدة">علاج الكسور المعقدة وغير الملتئمة</option>
-                  <option value="جهاز الإليزاروف وتطويل العظام">جهاز الإليزاروف وتصحيح التشوهات وتطويل العظام</option>
-                  <option value="عظام الأطفال">عظام الأطفال وتقوس الساقين والقدم المخلوبية</option>
-                  <option value="استشارة عظام عامة">استشارة عامة في جراحة العظام والمفاصل</option>
-                </select>
+              <div class="form-field-unit">
+                <label for="form_notes" class="field-label">ملاحظات الحالة أو تفاصيل الشكوى (اختياري)</label>
+                <textarea id="form_notes" name="notes_detail" class="field-input field-textarea" placeholder="اكتب نبذة مختصرة عن الأعراض، مدة الألم، أو العمليات والأشعات السابقة..."></textarea>
               </div>
 
-              <div class="concierge-field-unit">
-                <label class="concierge-field-label" for="c_date">الموعد المقترح للكشف</label>
-                <input type="date" id="c_date" name="preferred_date" class="concierge-field-input">
-              </div>
-
-              <div class="concierge-field-unit">
-                <label class="concierge-field-label" for="c_notes">ملاحظات أو وصف للأعراض</label>
-                <textarea id="c_notes" name="patient_notes" class="concierge-field-input concierge-field-textarea" placeholder="اكتب نبذة مختصرة عن الشكوى أو الفحوصات والأشعات السابقة..."></textarea>
-              </div>
-
-              <button type="submit" class="btn-agency btn-agency-primary" style="width: 100%; padding: 1.15rem; font-size: 1.15rem;">
-                تأكيد طلب الموعد
+              <button type="submit" class="btn-luxe btn-luxe-primary btn-block">
+                <span>تأكيد طلب موعد الكشف</span>
               </button>
             </form>
           </div>
 
-          <!-- Terminal Panel -->
-          <div class="concierge-side-terminal reveal delay-2" data-reveal="fade-up">
-            <div class="consultant-suite-card">
-              <h3 class="suite-card-title">عيادة د. هاني محمد عفيفي</h3>
-              <div class="suite-card-degree">دكتوراه جراحة العظام — استشاري أمراض وجراحة العظام</div>
+          <!-- Clinic Direct Authority Information -->
+          <div class="lounge-info-card reveal-on-scroll">
+            <div class="authority-profile-badge">
+              <h3 class="profile-brand-heading">عيادة د. هاني محمد عفيفي</h3>
+              <p class="profile-brand-subheading">دكتوراه جراحة العظام — استشاري أمراض وجراحة العظام والمفاصل والعمود الفقري</p>
+            </div>
 
-              <div class="suite-telemetry-list">
-                <div class="suite-telemetry-row">
-                  <span class="suite-telemetry-label">العنوان والمقر</span>
-                  <span class="suite-telemetry-val">بنها – سنتر حجازي بجوار المحكمة – الدور الثالث</span>
-                </div>
-
-                <div class="suite-telemetry-row">
-                  <span class="suite-telemetry-label">الهاتف والحجز المباشر</span>
-                  <a href="tel:0133273922" class="suite-telemetry-val suite-phone-action">0133273922</a>
-                </div>
-
-                <div class="suite-telemetry-row">
-                  <span class="suite-telemetry-label">نظام المواعيد</span>
-                  <span class="suite-telemetry-val">بالحجز المسبق لضمان الخصوصية وجودة الاستشارة</span>
-                </div>
+            <div class="contact-details-list">
+              <div class="contact-item">
+                <span class="contact-item-tag">المقر والعيادة</span>
+                <span class="contact-item-val">بنها – سنتر حجازي بجوار المحكمة – الدور الثالث</span>
               </div>
 
-              <div class="suite-ctas-column">
-                <a href="tel:0133273922" class="btn-agency btn-agency-white" style="width: 100%;">
-                  اتصل الآن: 0133273922
-                </a>
-                <a href="https://wa.me/20133273922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D8%AF%D9%83%D8%AA%D9%88%D8%B1%20%D9%87%D8%A7%D9%86%D9%8A%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D9%85%D9%88%D8%B9%D8%AF%20%D9%83%D8%B4%D9%81" target="_blank" rel="noopener noreferrer" class="btn-agency btn-agency-dark-outline" style="width: 100%;">
-                  تواصل عبر واتساب
-                </a>
+              <div class="contact-item">
+                <span class="contact-item-tag">الحجز الهاتفي المباشر</span>
+                <a href="tel:0133273922" class="contact-item-val hotline-val" dir="ltr">0133273922</a>
               </div>
+
+              <div class="contact-item">
+                <span class="contact-item-tag">نظام المواعيد</span>
+                <span class="contact-item-val">بالحجز المسبق لضمان الخصوصية وجودة الوقت المخصص لكل مريض</span>
+              </div>
+            </div>
+
+            <div class="lounge-action-buttons">
+              <a href="tel:0133273922" class="btn-luxe btn-luxe-outline-light btn-block">
+                <span>اتصال هاتفي مباشر: 0133273922</span>
+              </a>
+              <a href="https://wa.me/20133273922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D8%AF%D9%83%D8%AA%D9%88%D8%B1%20%D9%87%D8%A7%D9%86%D9%8A%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D9%85%D9%88%D8%B9%D8%AF%20%D9%83%D8%B4%D9%81%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D9%8A" target="_blank" rel="noopener noreferrer" class="btn-luxe btn-luxe-whatsapp btn-block">
+                <span>تواصل عبر واتساب العيادة</span>
+              </a>
             </div>
           </div>
         </div>
@@ -609,45 +612,49 @@
   </main>
 
   <!-- ===================================================================
-       FOOTER
+       REFINED EDITORIAL FOOTER
        =================================================================== -->
-  <footer class="agency-footer">
-    <div class="container">
-      <div class="footer-top-row">
-        <div class="footer-consultant-profile">
-          <div class="profile-brand-name">عيادة د. هاني محمد عفيفي</div>
-          <div class="profile-brand-degree">دكتوراه جراحة العظام — استشاري أمراض وجراحة العظام</div>
-          <p class="profile-narrative">
-            رعاية متقدمة لعلاج أمراض وجراحات العظام والمفاصل والعمود الفقري، مكرسة لتوفير أحدث التقنيات الطبية والحلول الجراحية الدقيقة.
+  <footer class="master-footer">
+    <div class="content-container">
+      <div class="footer-layout">
+        <div class="footer-brand-segment">
+          <div class="footer-brand-title">عيادة د. هاني محمد عفيفي</div>
+          <div class="footer-brand-subtitle">استشاري أمراض وجراحة العظام والمفاصل والعمود الفقري — دكتوراه جراحة العظام</div>
+          <p class="footer-editorial-copy">
+            علامة طبية استشارية متخصصة تكرس المعرفة الأكاديمية والخبرة الجراحية الدقيقة لتقديم أفضل مستويات الرعاية الصحية لأمراض العظام وإصابات المفاصل.
           </p>
         </div>
 
-        <div class="footer-links-column">
-          <div class="links-column-head">التخصصات</div>
-          <a href="#theater" class="footer-plain-link">علاج خشونة الركبة</a>
-          <a href="#theater" class="footer-plain-link">المفاصل الصناعية</a>
-          <a href="#theater" class="footer-plain-link">مناظير الركبة والكتف</a>
-          <a href="#theater" class="footer-plain-link">جراحات العمود الفقري</a>
-          <a href="#theater" class="footer-plain-link">الكسور المعقدة</a>
-          <a href="#theater" class="footer-plain-link">جهاز الإليزاروف</a>
+        <div class="footer-links-segment">
+          <div class="segment-headline">التخصصات الجراحية</div>
+          <a href="#chapters" class="footer-link">جراحة المفاصل الصناعية</a>
+          <a href="#chapters" class="footer-link">مناظير الركبة والكتف</a>
+          <a href="#chapters" class="footer-link">علاج خشونة المفاصل وPRP</a>
+          <a href="#chapters" class="footer-link">جراحات العمود الفقري والانزلاق</a>
+          <a href="#chapters" class="footer-link">علاج الكسور المعقدة وغير الملتئمة</a>
+          <a href="#ilizarov-chamber" class="footer-link">جهاز الإليزاروف وبناء العظام</a>
         </div>
 
-        <div class="footer-links-column">
-          <div class="links-column-head">العنوان والتواصل</div>
-          <span class="footer-plain-link">بنها – سنتر حجازي بجوار المحكمة – الدور الثالث</span>
-          <a href="tel:0133273922" class="footer-plain-link" style="direction: ltr; text-align: right; color: var(--electric-cyan); font-weight: bold;">0133273922</a>
-          <span class="footer-plain-link">المواعيد بالحجز المسبق لراحتكم</span>
+        <div class="footer-links-segment">
+          <div class="segment-headline">معلومات المقر والتواصل</div>
+          <span class="footer-link">بنها – سنتر حجازي بجوار المحكمة – الدور الثالث</span>
+          <a href="tel:0133273922" class="footer-link" dir="ltr" style="color: var(--color-cyan); font-weight: 700; text-align: right;">0133273922</a>
+          <span class="footer-link">المواعيد بالحجز المسبق لراحتكم</span>
         </div>
       </div>
 
-      <div class="footer-base-bar">
-        <div>جميع الحقوق محفوظة © 2026 عيادة د. هاني محمد عفيفي لجراحة العظام</div>
-        <div>Bespoke Medical Brand Experience</div>
+      <div class="footer-bottom-line">
+        <div class="copyright-note">
+          جميع الحقوق محفوظة © 2026 عيادة د. هاني محمد عفيفي لجراحة العظام
+        </div>
+        <div class="agency-credit">
+          Bespoke Luxury Medical Digital Experience
+        </div>
       </div>
     </div>
   </footer>
 
-  <!-- Interactive Scripts -->
+  <!-- Master Interactive Scripts -->
   <script src="js/main.js"></script>
 </body>
 </html>
