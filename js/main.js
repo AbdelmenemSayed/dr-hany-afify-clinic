@@ -1,16 +1,17 @@
 /**
- * د. هاني محمد عفيفي | استشاري جراحة العظام والمفاصل
- * Luxury Editorial Medical Brand - Interactive Motion & Experience Engine
+ * عيادة د. هاني محمد عفيفي | استشاري أمراض وجراحة العظام
+ * Dr. Hany Mohamed Afify | World-Class Orthopedic Consultant Brand
+ * Interactive Motion & Treatment Theater Engine
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   const CLINIC_WHATSAPP = '20133273922'; // 0133273922
 
   // ===================================================================
-  // 1. SCROLL PROGRESS BAR
+  // 1. TOP SCROLL PROGRESS INDICATOR
   // ===================================================================
   const scrollProgressBar = document.getElementById('scrollProgress');
-  
+
   function updateScrollProgress() {
     if (!scrollProgressBar) return;
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -22,43 +23,43 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', updateScrollProgress, { passive: true });
 
   // ===================================================================
-  // 2. STICKY HEADER & SCROLLSPY
+  // 2. STICKY HEADER & ACTIVE SCROLLSPY
   // ===================================================================
-  const siteHeader = document.getElementById('siteHeader');
-  const sections = document.querySelectorAll('section[id]');
-  const navItems = document.querySelectorAll('.nav-links .nav-item');
+  const agencyHeader = document.getElementById('agencyHeader');
+  const navLinks = document.querySelectorAll('.agency-nav-link');
+  const trackedSections = document.querySelectorAll('section[id]');
 
-  function handleHeaderAndScrollspy() {
+  function handleHeaderAndNav() {
     const scrollY = window.scrollY;
 
-    // Header elevation
-    if (scrollY > 40) {
-      siteHeader?.classList.add('scrolled');
+    // Header elevation on scroll
+    if (scrollY > 30) {
+      agencyHeader?.classList.add('scrolled');
     } else {
-      siteHeader?.classList.remove('scrolled');
+      agencyHeader?.classList.remove('scrolled');
     }
 
-    // Scrollspy active state
-    let currentActiveId = '';
-    sections.forEach(section => {
+    // Scrollspy active indicator
+    let currentSectionId = '';
+    trackedSections.forEach(section => {
       const sectionTop = section.offsetTop - 140;
       const sectionHeight = section.offsetHeight;
       if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-        currentActiveId = section.getAttribute('id');
+        currentSectionId = section.getAttribute('id');
       }
     });
 
-    if (currentActiveId) {
-      navItems.forEach(link => {
+    if (currentSectionId) {
+      navLinks.forEach(link => {
         link.classList.remove('active');
-        if (link.getAttribute('href') === `#${currentActiveId}`) {
+        if (link.getAttribute('href') === `#${currentSectionId}`) {
           link.classList.add('active');
         }
       });
     }
   }
 
-  window.addEventListener('scroll', handleHeaderAndScrollspy, { passive: true });
+  window.addEventListener('scroll', handleHeaderAndNav, { passive: true });
 
   // ===================================================================
   // 3. SCROLL REVEAL ENGINE (INTERSECTION OBSERVER)
@@ -75,40 +76,39 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }, {
       root: null,
-      threshold: 0.12,
+      threshold: 0.1,
       rootMargin: '0px 0px -40px 0px'
     });
 
     revealElements.forEach(el => revealObserver.observe(el));
   } else {
-    // Fallback for older browsers
+    // Fallback
     revealElements.forEach(el => el.classList.add('revealed'));
   }
 
   // ===================================================================
-  // 4. ANIMATED STATISTICS COUNTERS
+  // 4. ANIMATED TELEMETRY COUNTERS
   // ===================================================================
   const counterElements = document.querySelectorAll('.counter[data-target]');
-  let countersAnimated = false;
+  let countersFired = false;
 
-  function animateCounters() {
-    if (countersAnimated) return;
-    countersAnimated = true;
+  function runCounters() {
+    if (countersFired) return;
+    countersFired = true;
 
     counterElements.forEach(counter => {
       const target = parseInt(counter.getAttribute('data-target'), 10);
-      const duration = 2200; // ms
+      const duration = 2400; // ms
       const startTime = performance.now();
 
-      function updateCounter(currentTime) {
-        const elapsed = currentTime - startTime;
+      function updateCounter(now) {
+        const elapsed = now - startTime;
         const progress = Math.min(elapsed / duration, 1);
-        
-        // Ease-out expo curve for smooth deceleration
+
+        // Exponential ease-out
         const easeOut = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
         const currentVal = Math.floor(easeOut * target);
 
-        // Format with commas (e.g. 15,000)
         counter.textContent = currentVal.toLocaleString('en-US');
 
         if (progress < 1) {
@@ -122,60 +122,87 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Trigger counters when the metrics strip enters viewport
-  const metricsSection = document.querySelector('.metrics-strip');
-  if (metricsSection && 'IntersectionObserver' in window) {
-    const metricsObserver = new IntersectionObserver((entries, observer) => {
+  const telemetrySection = document.querySelector('.telemetry-strip-section');
+  if (telemetrySection && 'IntersectionObserver' in window) {
+    const telemetryObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          animateCounters();
+          runCounters();
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.25 });
+    }, { threshold: 0.2 });
 
-    metricsObserver.observe(metricsSection);
+    telemetryObserver.observe(telemetrySection);
   }
 
   // ===================================================================
-  // 5. SUBTLE HERO MOUSE PARALLAX (DESKTOP)
+  // 5. INTERACTIVE TREATMENT THEATER (MASTER-DETAIL SWITCHER)
+  // ===================================================================
+  const theaterTabs = document.querySelectorAll('.theater-tab-item');
+  const theaterPanes = document.querySelectorAll('.theater-pane');
+
+  if (theaterTabs.length > 0 && theaterPanes.length > 0) {
+    theaterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const targetPaneId = tab.getAttribute('data-pane');
+        if (!targetPaneId) return;
+
+        const targetPane = document.getElementById(targetPaneId);
+        if (!targetPane) return;
+
+        // Update active tab
+        theaterTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        // Transition pane
+        theaterPanes.forEach(p => {
+          p.classList.remove('active-pane');
+        });
+        targetPane.classList.add('active-pane');
+      });
+    });
+  }
+
+  // ===================================================================
+  // 6. HERO CANVAS 3D HOVER TILT (DESKTOP)
   // ===================================================================
   const heroSection = document.getElementById('hero');
-  const heroPortrait = document.getElementById('heroPortrait');
+  const heroCanvas = document.getElementById('heroCanvas');
 
-  if (heroSection && heroPortrait && window.matchMedia('(min-width: 1024px)').matches) {
+  if (heroSection && heroCanvas && window.matchMedia('(min-width: 1024px)').matches) {
     heroSection.addEventListener('mousemove', (e) => {
       const rect = heroSection.getBoundingClientRect();
       const x = (e.clientX - rect.left) / rect.width - 0.5;
       const y = (e.clientY - rect.top) / rect.height - 0.5;
 
-      heroPortrait.style.transform = `perspective(1000px) rotateY(${x * -6}deg) rotateX(${y * 6}deg) translateY(-6px)`;
+      heroCanvas.style.transform = `perspective(1000px) rotateY(${x * -6}deg) rotateX(${y * 6}deg) translateY(-4px)`;
     });
 
     heroSection.addEventListener('mouseleave', () => {
-      heroPortrait.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg) translateY(0)';
+      heroCanvas.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg) translateY(0)';
     });
   }
 
   // ===================================================================
-  // 6. BOOKING FORM & WHATSAPP GENERATION
+  // 7. PRIVATE CONCIERGE BOOKING & WHATSAPP GENERATION
   // ===================================================================
-  const dateInput = document.getElementById('pt_date');
+  const dateInput = document.getElementById('c_date');
   if (dateInput) {
     const today = new Date().toISOString().split('T')[0];
     dateInput.setAttribute('min', today);
   }
 
-  const bookingForm = document.getElementById('bookingForm');
+  const bookingForm = document.getElementById('conciergeBookingForm');
   if (bookingForm) {
     bookingForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      const name = document.getElementById('pt_name')?.value.trim();
-      const phone = document.getElementById('pt_phone')?.value.trim();
-      const service = document.getElementById('pt_service')?.value || 'استشارة عظام عامة';
-      const date = document.getElementById('pt_date')?.value || 'أقرب موعد متاح';
-      const notes = document.getElementById('pt_notes')?.value.trim() || 'لا توجد ملاحظات إضافية';
+      const name = document.getElementById('c_name')?.value.trim();
+      const phone = document.getElementById('c_phone')?.value.trim();
+      const service = document.getElementById('c_service')?.value || 'استشارة عامة في جراحة العظام والمفاصل';
+      const date = document.getElementById('c_date')?.value || 'أقرب موعد متاح';
+      const notes = document.getElementById('c_notes')?.value.trim() || 'لا توجد ملاحظات إضافية';
 
       if (!name || !phone) {
         alert('يرجى إدخال اسم المريض ورقم الهاتف لتأكيد الموعد.');
@@ -195,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
 تم إرسال الطلب عبر الموقع الرسمي.`;
 
       const whatsappUrl = `https://wa.me/${CLINIC_WHATSAPP}?text=${encodeURIComponent(message)}`;
-      
+
       // Open WhatsApp in new tab
       window.open(whatsappUrl, '_blank');
       bookingForm.reset();
