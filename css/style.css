@@ -1,58 +1,62 @@
 /* ===================================================================
-   عيادة د. هاني محمد عفيفي - استشاري أمراض وجراحة العظام
-   Dr. Hany Mohamed Afify | World-Class Orthopedic Consultant Experience
-   Bespoke Editorial Medical Brand Architecture
+   عيادة د. هاني محمد عفيفي - استشاري أمراض وجراحة العظام والمفاصل
+   Dr. Hany Mohamed Afify | Ultra-Luxury VIP Concierge Orthopedic Brand
+   Royal Warm Champagne Gold & Midnight Navy Design System
    =================================================================== */
 
-/* --- DESIGN TOKENS --- */
+/* --- DESIGN TOKENS (ROYAL VIP PALETTE) --- */
 :root {
-  /* Color Palette */
-  --color-void: #060b19;
-  --color-navy-deep: #0a1128;
-  --color-navy-card: #111b36;
-  --color-navy-surface: #18254b;
-  --color-surgical-blue: #0284c7;
-  --color-surgical-blue-dark: #0369a1;
-  --color-cyan: #00d2ff;
-  --color-cyan-glow: rgba(0, 210, 255, 0.3);
-  --color-blue-glow: rgba(2, 132, 199, 0.25);
-  
-  --color-white: #ffffff;
-  --color-alabaster: #f8fafc;
-  --color-surface-gray: #f1f5f9;
-  --color-titanium: #94a3b8;
-  --color-border-light: #e2e8f0;
-  --color-border-dark: rgba(255, 255, 255, 0.08);
+  /* Royal Midnight & Ink */
+  --color-midnight-royal: #0B1526;
+  --color-midnight-card: #111E36;
+  --color-midnight-surface: #172642;
+  --color-midnight-deep: #070D18;
 
-  --color-dark-text: #070d18;
-  --color-body-text: #334155;
-  --color-muted-text: #64748b;
-  --color-light-text: #ffffff;
-  --color-sublight-text: #cbd5e1;
+  /* Champagne Gold & Brushed Bronze Accents */
+  --color-gold-champagne: #C29D59;
+  --color-gold-light: #E0C797;
+  --color-gold-deep: #9E7D3E;
+  --color-gold-glow: rgba(194, 157, 89, 0.22);
+  --color-gold-halo: rgba(194, 157, 89, 0.12);
+
+  /* Warm Pearl, Alabaster & Sand */
+  --color-pearl-white: #FFFFFF;
+  --color-alabaster: #FAF8F5;
+  --color-sand-soft: #F4EFEB;
+  --color-stone-border: #E8E2D8;
+  --color-stone-border-light: rgba(232, 226, 216, 0.6);
+  --color-border-dark: rgba(224, 199, 151, 0.16);
+
+  /* Editorial Typography Colors */
+  --color-text-charcoal: #141A24;
+  --color-text-body: #4A5568;
+  --color-text-muted: #6B778C;
+  --color-text-light: #FFFFFF;
+  --color-text-sublight: #D9DCE3;
 
   /* Typography */
   --font-editorial: 'Cairo', system-ui, -apple-system, sans-serif;
   --font-narrative: 'Tajawal', system-ui, -apple-system, sans-serif;
 
-  /* Layout & Geometry */
-  --max-width: 1280px;
-  --radius-xs: 6px;
-  --radius-sm: 12px;
-  --radius-md: 18px;
-  --radius-lg: 28px;
+  /* Geometry & Radii */
+  --max-width: 1260px;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
   --radius-pill: 9999px;
 
   /* Transitions */
-  --ease-fluid: cubic-bezier(0.16, 1, 0.3, 1);
-  --trans-fast: 0.2s var(--ease-fluid);
-  --trans-med: 0.4s var(--ease-fluid);
-  --trans-slow: 0.8s var(--ease-fluid);
+  --ease-royal: cubic-bezier(0.16, 1, 0.3, 1);
+  --trans-fast: 0.22s var(--ease-royal);
+  --trans-med: 0.45s var(--ease-royal);
+  --trans-slow: 0.85s var(--ease-royal);
 
-  /* Shadows */
-  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.03);
-  --shadow-elevated: 0 16px 40px rgba(7, 13, 24, 0.06);
-  --shadow-prominent: 0 24px 60px rgba(7, 13, 24, 0.12);
-  --shadow-glow-cyan: 0 12px 35px var(--color-cyan-glow);
+  /* Shadows (Natural Studio Lighting) */
+  --shadow-subtle: 0 4px 20px rgba(11, 21, 38, 0.03);
+  --shadow-elevated: 0 16px 40px rgba(11, 21, 38, 0.05);
+  --shadow-prominent: 0 24px 60px rgba(11, 21, 38, 0.09);
+  --shadow-gold-glow: 0 10px 30px var(--color-gold-glow);
 }
 
 /* --- RESET & FOUNDATION --- */
@@ -71,23 +75,24 @@ html {
 
 body {
   font-family: var(--font-narrative);
-  background-color: var(--color-white);
-  color: var(--color-body-text);
+  background-color: var(--color-alabaster);
+  color: var(--color-text-body);
   line-height: 1.85;
   overflow-x: hidden;
   text-align: right;
+  letter-spacing: 0.005em;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-editorial);
-  color: var(--color-dark-text);
+  color: var(--color-text-charcoal);
   line-height: 1.25;
   font-weight: 800;
   letter-spacing: -0.015em;
 }
 
 p {
-  color: var(--color-body-text);
+  color: var(--color-text-body);
   font-size: 1.05rem;
 }
 
@@ -106,17 +111,17 @@ img, svg {
   width: 100%;
   max-width: var(--max-width);
   margin-inline: auto;
-  padding-inline: 2rem;
+  padding-inline: 2.2rem;
 }
 
-/* --- TOP SCROLL TRACER --- */
+/* --- TOP SCROLL TRACER (CHAMPAGNE GOLD) --- */
 .scroll-tracer {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--color-surgical-blue), var(--color-cyan));
+  background: linear-gradient(90deg, var(--color-gold-deep), var(--color-gold-light));
   transform-origin: right;
   transform: scaleX(0);
   z-index: 9999;
@@ -124,24 +129,24 @@ img, svg {
 }
 
 /* ===================================================================
-   MASTER EDITORIAL HEADER
+   MASTER VIP NAVIGATION BAR
    =================================================================== */
 .master-header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(250, 248, 245, 0.94);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-stone-border);
   transition: all var(--trans-med);
-  height: 86px;
+  height: 88px;
   display: flex;
   align-items: center;
 }
 
 .master-header.scrolled {
-  height: 72px;
+  height: 74px;
   background: rgba(255, 255, 255, 0.98);
   box-shadow: var(--shadow-subtle);
 }
@@ -150,7 +155,7 @@ img, svg {
   width: 100%;
   max-width: var(--max-width);
   margin-inline: auto;
-  padding-inline: 2rem;
+  padding-inline: 2.2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -160,17 +165,17 @@ img, svg {
 .brand-signature {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.1rem;
 }
 
 .brand-emblem {
-  height: 50px;
+  height: 52px;
   width: auto;
   transition: transform var(--trans-med);
 }
 
 .brand-signature:hover .brand-emblem {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 .brand-text-block {
@@ -182,28 +187,28 @@ img, svg {
   font-family: var(--font-editorial);
   font-size: 1.25rem;
   font-weight: 900;
-  color: var(--color-dark-text);
+  color: var(--color-midnight-royal);
   line-height: 1.2;
 }
 
 .brand-credentials {
   font-size: 0.8rem;
   font-weight: 700;
-  color: var(--color-surgical-blue);
-  letter-spacing: 0.02em;
+  color: var(--color-gold-deep);
+  letter-spacing: 0.03em;
 }
 
 .master-nav {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 2.2rem;
 }
 
 .nav-anchor {
   font-family: var(--font-editorial);
   font-size: 0.96rem;
   font-weight: 700;
-  color: var(--color-muted-text);
+  color: var(--color-text-muted);
   position: relative;
   padding-block: 0.4rem;
 }
@@ -215,14 +220,14 @@ img, svg {
   right: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--color-surgical-blue), var(--color-cyan));
+  background: linear-gradient(90deg, var(--color-gold-deep), var(--color-gold-light));
   transition: width var(--trans-med);
   border-radius: var(--radius-pill);
 }
 
 .nav-anchor:hover,
 .nav-anchor.active {
-  color: var(--color-dark-text);
+  color: var(--color-midnight-royal);
 }
 
 .nav-anchor:hover::after,
@@ -233,22 +238,22 @@ img, svg {
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.6rem;
 }
 
 .header-direct-phone {
   font-family: var(--font-editorial);
   font-weight: 800;
   font-size: 1.05rem;
-  color: var(--color-dark-text);
+  color: var(--color-midnight-royal);
 }
 
 .header-direct-phone:hover {
-  color: var(--color-surgical-blue);
+  color: var(--color-gold-deep);
 }
 
 /* ===================================================================
-   LUXURY BUTTONS SYSTEM
+   ROYAL LUXURY BUTTONS
    =================================================================== */
 .btn-luxe {
   position: relative;
@@ -259,12 +264,12 @@ img, svg {
   border-radius: var(--radius-xs);
   font-family: var(--font-editorial);
   font-weight: 800;
-  font-size: 1rem;
+  font-size: 0.98rem;
   cursor: pointer;
   border: 1px solid transparent;
   transition: all var(--trans-med);
   overflow: hidden;
-  letter-spacing: 0.015em;
+  letter-spacing: 0.02em;
   text-align: center;
 }
 
@@ -278,7 +283,7 @@ img, svg {
   background: linear-gradient(
     90deg,
     rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.25) 50%,
+    rgba(255, 255, 255, 0.28) 50%,
     rgba(255, 255, 255, 0) 100%
   );
   transform: rotate(25deg);
@@ -291,65 +296,68 @@ img, svg {
 }
 
 .btn-luxe-primary {
-  background-color: var(--color-navy-deep);
-  color: var(--color-white);
-  border-color: var(--color-navy-deep);
-  box-shadow: 0 4px 16px rgba(10, 17, 40, 0.15);
+  background-color: var(--color-midnight-royal);
+  color: var(--color-pearl-white);
+  border: 1px solid var(--color-gold-deep);
+  box-shadow: 0 4px 16px rgba(11, 21, 38, 0.12);
 }
 
 .btn-luxe-primary:hover {
-  background-color: var(--color-surgical-blue);
-  border-color: var(--color-surgical-blue);
+  background-color: var(--color-gold-champagne);
+  color: var(--color-midnight-royal);
+  border-color: var(--color-gold-champagne);
   transform: translateY(-2px);
-  box-shadow: var(--shadow-glow-cyan);
+  box-shadow: var(--shadow-gold-glow);
 }
 
 .btn-luxe-secondary {
   background-color: transparent;
-  color: var(--color-navy-deep);
-  border-color: rgba(10, 17, 40, 0.25);
+  color: var(--color-midnight-royal);
+  border: 1px solid var(--color-stone-border);
 }
 
 .btn-luxe-secondary:hover {
-  background-color: var(--color-surface-gray);
-  border-color: var(--color-navy-deep);
+  background-color: var(--color-pearl-white);
+  border-color: var(--color-gold-champagne);
   transform: translateY(-2px);
 }
 
-.btn-luxe-cyan {
-  background: linear-gradient(135deg, var(--color-surgical-blue), var(--color-cyan));
-  color: var(--color-void);
+.btn-luxe-gold {
+  background: linear-gradient(135deg, var(--color-gold-deep), var(--color-gold-champagne));
+  color: var(--color-midnight-royal);
   font-weight: 900;
   border: none;
-  box-shadow: 0 8px 30px var(--color-cyan-glow);
+  box-shadow: 0 6px 24px var(--color-gold-glow);
 }
 
-.btn-luxe-cyan:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 14px 40px var(--color-cyan-glow);
+.btn-luxe-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px var(--color-gold-glow);
+  background: linear-gradient(135deg, var(--color-gold-champagne), var(--color-gold-light));
 }
 
 .btn-luxe-outline-light {
   background-color: transparent;
-  color: var(--color-white);
-  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--color-pearl-white);
+  border: 1px solid rgba(224, 199, 151, 0.35);
 }
 
 .btn-luxe-outline-light:hover {
-  background-color: rgba(255, 255, 255, 0.08);
-  border-color: var(--color-white);
+  background-color: rgba(194, 157, 89, 0.12);
+  border-color: var(--color-gold-champagne);
+  color: var(--color-gold-light);
 }
 
 .btn-luxe-whatsapp {
-  background-color: #25D366;
-  color: var(--color-white);
+  background-color: #128C7E;
+  color: var(--color-pearl-white);
   border: none;
 }
 
 .btn-luxe-whatsapp:hover {
-  background-color: #1eb956;
+  background-color: #075E54;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+  box-shadow: 0 8px 24px rgba(18, 140, 126, 0.3);
 }
 
 .btn-block {
@@ -357,13 +365,14 @@ img, svg {
 }
 
 /* ===================================================================
-   SCENE 01: THE IMMERSIVE OVERTURE (HERO)
+   SCENE 01: THE IMPERIAL OVERTURE (HERO)
    =================================================================== */
 .scene-overture {
   position: relative;
-  background-color: var(--color-white);
+  background-color: var(--color-alabaster);
   padding-block: 5.5rem 6.5rem;
   overflow: hidden;
+  border-bottom: 1px solid var(--color-stone-border);
 }
 
 .overture-ambient-backdrop {
@@ -377,42 +386,33 @@ img, svg {
 .ambient-glow-sphere {
   position: absolute;
   border-radius: 50%;
-  filter: blur(100px);
-  opacity: 0.35;
-  animation: spherePulse 16s ease-in-out infinite alternate;
+  filter: blur(120px);
+  opacity: 0.25;
 }
 
 .sphere-primary {
   width: 550px;
   height: 550px;
-  background: radial-gradient(circle, var(--color-blue-glow) 0%, transparent 70%);
-  top: -100px;
+  background: radial-gradient(circle, var(--color-gold-glow) 0%, transparent 70%);
+  top: -120px;
   right: -80px;
 }
 
 .sphere-cyan {
   width: 480px;
   height: 480px;
-  background: radial-gradient(circle, var(--color-cyan-glow) 0%, transparent 70%);
-  bottom: -120px;
+  background: radial-gradient(circle, rgba(17, 30, 54, 0.08) 0%, transparent 70%);
+  bottom: -100px;
   left: -80px;
-  animation-delay: -8s;
 }
 
 .surgical-grid-mesh {
   position: absolute;
   inset: 0;
   background-image: 
-    linear-gradient(to right, rgba(14, 23, 42, 0.02) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(14, 23, 42, 0.02) 1px, transparent 1px);
-  background-size: 50px 50px;
-  opacity: 0.8;
-}
-
-@keyframes spherePulse {
-  0% { transform: scale(1) translate(0, 0); }
-  50% { transform: scale(1.15) translate(30px, -20px); }
-  100% { transform: scale(0.95) translate(-20px, 30px); }
+    linear-gradient(to right, rgba(194, 157, 89, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(194, 157, 89, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
 }
 
 .overture-layout {
@@ -421,42 +421,43 @@ img, svg {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   align-items: center;
-  gap: 4.5rem;
+  gap: 4.8rem;
 }
 
 .prestige-tag {
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
-  padding: 0.45rem 1.1rem;
+  padding: 0.45rem 1.2rem;
   border-radius: var(--radius-pill);
-  background-color: rgba(2, 132, 199, 0.08);
-  border: 1px solid rgba(2, 132, 199, 0.18);
-  color: var(--color-surgical-blue);
+  background-color: var(--color-pearl-white);
+  border: 1px solid var(--color-gold-champagne);
+  color: var(--color-gold-deep);
   font-family: var(--font-editorial);
   font-weight: 700;
   font-size: 0.86rem;
   margin-bottom: 1.6rem;
+  box-shadow: 0 2px 10px rgba(194, 157, 89, 0.08);
 }
 
 .tag-pulse {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
-  background-color: var(--color-cyan);
-  box-shadow: 0 0 10px var(--color-cyan);
+  background-color: var(--color-gold-champagne);
+  box-shadow: 0 0 8px var(--color-gold-champagne);
 }
 
 .overture-headline {
   font-size: clamp(2.3rem, 3.8vw, 3.4rem);
   font-weight: 900;
-  color: var(--color-dark-text);
-  line-height: 1.22;
+  color: var(--color-midnight-royal);
+  line-height: 1.24;
   margin-bottom: 1.6rem;
 }
 
 .doctor-prestige-card {
-  border-right: 3px solid var(--color-surgical-blue);
+  border-right: 3px solid var(--color-gold-champagne);
   padding-right: 1.4rem;
   margin-bottom: 1.8rem;
 }
@@ -465,27 +466,27 @@ img, svg {
   font-family: var(--font-editorial);
   font-size: 1.45rem;
   font-weight: 900;
-  color: var(--color-dark-text);
+  color: var(--color-midnight-royal);
   line-height: 1.25;
 }
 
 .prestige-degree {
   font-size: 1.05rem;
   font-weight: 700;
-  color: var(--color-surgical-blue);
+  color: var(--color-gold-deep);
 }
 
 .prestige-specialty {
   font-size: 0.95rem;
-  color: var(--color-muted-text);
+  color: var(--color-text-muted);
 }
 
 .overture-lead-text {
-  font-size: 1.18rem;
-  color: var(--color-body-text);
-  line-height: 1.8;
+  font-size: 1.15rem;
+  color: var(--color-text-body);
+  line-height: 1.85;
   margin-bottom: 2.4rem;
-  max-width: 600px;
+  max-width: 580px;
 }
 
 .overture-cta-row {
@@ -501,7 +502,7 @@ img, svg {
   align-items: center;
   gap: 2.2rem;
   padding-top: 2rem;
-  border-top: 1px solid var(--color-border-light);
+  border-top: 1px solid var(--color-stone-border);
 }
 
 .micro-metric {
@@ -513,20 +514,20 @@ img, svg {
   font-family: var(--font-editorial);
   font-size: 1.65rem;
   font-weight: 900;
-  color: var(--color-dark-text);
+  color: var(--color-midnight-royal);
   line-height: 1.1;
 }
 
 .metric-lbl {
   font-size: 0.84rem;
-  color: var(--color-muted-text);
+  color: var(--color-text-muted);
   font-weight: 500;
 }
 
 .micro-metric-divider {
   width: 1px;
   height: 38px;
-  background-color: var(--color-border-light);
+  background-color: var(--color-stone-border);
 }
 
 /* Portrait Visual Frame */
@@ -539,22 +540,22 @@ img, svg {
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-prominent);
-  background-color: var(--color-surface-gray);
-  border: 1px solid rgba(255, 255, 255, 0.6);
+  background-color: var(--color-pearl-white);
+  border: 1px solid var(--color-gold-champagne);
   transition: transform var(--trans-slow);
 }
 
 .portrait-halo {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 60%, rgba(7, 13, 24, 0.75) 100%);
+  background: linear-gradient(180deg, transparent 65%, rgba(11, 21, 38, 0.75) 100%);
   z-index: 1;
   pointer-events: none;
 }
 
 .doctor-art-portrait {
   width: 100%;
-  height: 580px;
+  height: 570px;
   object-fit: cover;
   object-position: top center;
   display: block;
@@ -562,7 +563,7 @@ img, svg {
 }
 
 .visual-portrait-chassis:hover .doctor-art-portrait {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
 .hud-status-badge {
@@ -571,10 +572,10 @@ img, svg {
   right: 24px;
   left: 24px;
   z-index: 2;
-  background: rgba(10, 17, 40, 0.88);
+  background: rgba(11, 21, 38, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(194, 157, 89, 0.35);
   border-radius: var(--radius-sm);
   padding: 1.1rem 1.4rem;
   display: flex;
@@ -583,11 +584,11 @@ img, svg {
 }
 
 .hud-status-icon {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background-color: var(--color-cyan);
-  box-shadow: 0 0 14px var(--color-cyan);
+  background-color: var(--color-gold-champagne);
+  box-shadow: 0 0 12px var(--color-gold-champagne);
   flex-shrink: 0;
 }
 
@@ -600,30 +601,31 @@ img, svg {
   font-family: var(--font-editorial);
   font-size: 0.95rem;
   font-weight: 800;
-  color: var(--color-white);
+  color: var(--color-pearl-white);
   line-height: 1.25;
 }
 
 .hud-sub {
   font-size: 0.82rem;
-  color: var(--color-sublight-text);
+  color: var(--color-gold-light);
 }
 
 /* ===================================================================
    SCENE 02: HUMAN MANIFESTO & PHILOSOPHY
    =================================================================== */
 .scene-manifesto {
-  padding-block: 6rem;
-  background-color: var(--color-alabaster);
+  padding-block: 6.5rem;
+  background-color: var(--color-pearl-white);
   position: relative;
+  border-bottom: 1px solid var(--color-stone-border);
 }
 
 .manifesto-card-grand {
-  background-color: var(--color-white);
+  background-color: var(--color-alabaster);
   border-radius: var(--radius-lg);
   padding: 4.5rem;
   box-shadow: var(--shadow-elevated);
-  border: 1px solid var(--color-border-light);
+  border: 1px solid var(--color-stone-border);
 }
 
 .section-kicker {
@@ -631,7 +633,7 @@ img, svg {
   font-family: var(--font-editorial);
   font-size: 0.88rem;
   font-weight: 700;
-  color: var(--color-surgical-blue);
+  color: var(--color-gold-deep);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 1.2rem;
@@ -640,8 +642,8 @@ img, svg {
 .manifesto-declaration {
   font-size: clamp(1.8rem, 3vw, 2.5rem);
   font-weight: 800;
-  color: var(--color-dark-text);
-  line-height: 1.4;
+  color: var(--color-midnight-royal);
+  line-height: 1.45;
   margin-bottom: 3.5rem;
   max-width: 1040px;
 }
@@ -656,7 +658,7 @@ img, svg {
 .narrative-highlight {
   font-size: 1.2rem;
   line-height: 1.9;
-  color: var(--color-dark-text);
+  color: var(--color-midnight-royal);
   margin-bottom: 1.5rem;
   font-weight: 500;
 }
@@ -664,14 +666,14 @@ img, svg {
 .narrative-sub {
   font-size: 1.05rem;
   line-height: 1.85;
-  color: var(--color-body-text);
+  color: var(--color-text-body);
 }
 
 .manifesto-pillars-list {
   display: flex;
   flex-direction: column;
   gap: 1.8rem;
-  border-right: 1px solid var(--color-border-light);
+  border-right: 1px solid var(--color-stone-border);
   padding-right: 2rem;
 }
 
@@ -685,8 +687,9 @@ img, svg {
   font-family: var(--font-editorial);
   font-size: 1.1rem;
   font-weight: 900;
-  color: var(--color-surgical-blue);
-  background-color: rgba(2, 132, 199, 0.08);
+  color: var(--color-midnight-royal);
+  background-color: var(--color-pearl-white);
+  border: 1px solid var(--color-gold-champagne);
   width: 44px;
   height: 44px;
   border-radius: var(--radius-sm);
@@ -698,21 +701,22 @@ img, svg {
 
 .pillar-text h4 {
   font-size: 1.15rem;
+  color: var(--color-midnight-royal);
   margin-bottom: 0.35rem;
 }
 
 .pillar-text p {
   font-size: 0.95rem;
-  color: var(--color-muted-text);
+  color: var(--color-text-muted);
   line-height: 1.6;
 }
 
 /* ===================================================================
-   SCENE 03: THE EDITORIAL CLINICAL CHAPTERS
+   SCENE 03: THE 6 CLINICAL CASE CHAPTERS
    =================================================================== */
 .scene-chapters {
   padding-block: 7.5rem;
-  background-color: var(--color-white);
+  background-color: var(--color-alabaster);
 }
 
 .chapters-intro-header {
@@ -723,12 +727,13 @@ img, svg {
 .chapters-main-title {
   font-size: clamp(2.2rem, 3.8vw, 3.2rem);
   font-weight: 900;
+  color: var(--color-midnight-royal);
   margin-bottom: 1.2rem;
 }
 
 .chapters-intro-desc {
   font-size: 1.2rem;
-  color: var(--color-muted-text);
+  color: var(--color-text-muted);
   line-height: 1.85;
 }
 
@@ -739,7 +744,7 @@ img, svg {
   align-items: center;
   gap: 5rem;
   padding-block: 4.5rem;
-  border-bottom: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-stone-border);
 }
 
 .chapter-feature:last-child {
@@ -759,7 +764,8 @@ img, svg {
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-elevated);
-  background-color: var(--color-surface-gray);
+  background-color: var(--color-pearl-white);
+  border: 1px solid var(--color-stone-border);
 }
 
 .chapter-img {
@@ -771,24 +777,24 @@ img, svg {
 }
 
 .chapter-visual-wrapper:hover .chapter-img {
-  transform: scale(1.04);
+  transform: scale(1.03);
 }
 
 .chapter-badge {
   position: absolute;
   top: 20px;
   right: 20px;
-  background: rgba(10, 17, 40, 0.85);
+  background: rgba(11, 21, 38, 0.9);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  color: var(--color-cyan);
+  color: var(--color-gold-light);
   font-family: var(--font-editorial);
   font-size: 0.76rem;
   font-weight: 800;
   letter-spacing: 0.12em;
   padding: 0.4rem 0.95rem;
   border-radius: var(--radius-pill);
-  border: 1px solid rgba(0, 210, 255, 0.3);
+  border: 1px solid rgba(194, 157, 89, 0.4);
 }
 
 .chapter-content-wrapper {
@@ -807,19 +813,19 @@ img, svg {
   font-family: var(--font-editorial);
   font-size: 0.9rem;
   font-weight: 800;
-  color: var(--color-surgical-blue);
+  color: var(--color-gold-deep);
 }
 
 .chapter-topic {
   font-size: 0.9rem;
   font-weight: 700;
-  color: var(--color-muted-text);
+  color: var(--color-text-muted);
 }
 
 .chapter-title {
   font-size: clamp(1.6rem, 2.4vw, 2.1rem);
   font-weight: 800;
-  color: var(--color-dark-text);
+  color: var(--color-midnight-royal);
   line-height: 1.3;
   margin-bottom: 1.25rem;
 }
@@ -827,7 +833,7 @@ img, svg {
 .chapter-description {
   font-size: 1.05rem;
   line-height: 1.85;
-  color: var(--color-body-text);
+  color: var(--color-text-body);
   margin-bottom: 1.8rem;
 }
 
@@ -836,15 +842,15 @@ img, svg {
   grid-template-columns: 1fr;
   gap: 0.75rem;
   margin-bottom: 2.2rem;
-  background-color: var(--color-alabaster);
-  padding: 1.4rem;
+  background-color: var(--color-pearl-white);
+  padding: 1.5rem;
   border-radius: var(--radius-sm);
-  border: 1px solid var(--color-border-light);
+  border: 1px solid var(--color-stone-border);
 }
 
 .chapter-point-item {
   font-size: 0.96rem;
-  color: var(--color-dark-text);
+  color: var(--color-text-charcoal);
   font-weight: 600;
 }
 
@@ -853,14 +859,14 @@ img, svg {
 }
 
 /* ===================================================================
-   SCENE 04: THE ILIZAROV GRAND CHAMBER (SPECIAL IMMERSIVE SUITE)
+   SCENE 04: THE ILIZAROV INNOVATION CHAMBER (ROYAL MIDNIGHT & GOLD)
    =================================================================== */
 .scene-ilizarov-chamber {
   position: relative;
-  background-color: var(--color-void);
+  background-color: var(--color-midnight-royal);
   padding-block: 8.5rem;
   overflow: hidden;
-  color: var(--color-white);
+  color: var(--color-pearl-white);
 }
 
 .chamber-ambient-orbs {
@@ -873,14 +879,14 @@ img, svg {
 .chamber-orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(120px);
-  opacity: 0.3;
+  filter: blur(140px);
+  opacity: 0.2;
 }
 
 .chamber-orb-cyan {
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, var(--color-cyan) 0%, transparent 70%);
+  background: radial-gradient(circle, var(--color-gold-champagne) 0%, transparent 70%);
   top: -150px;
   right: -100px;
 }
@@ -888,7 +894,7 @@ img, svg {
 .chamber-orb-blue {
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, var(--color-surgical-blue) 0%, transparent 70%);
+  background: radial-gradient(circle, #1E3A8A 0%, transparent 70%);
   bottom: -100px;
   left: -50px;
 }
@@ -908,9 +914,9 @@ img, svg {
   gap: 0.65rem;
   padding: 0.45rem 1.1rem;
   border-radius: var(--radius-pill);
-  background-color: rgba(0, 210, 255, 0.1);
-  border: 1px solid rgba(0, 210, 255, 0.25);
-  color: var(--color-cyan);
+  background-color: rgba(194, 157, 89, 0.1);
+  border: 1px solid rgba(194, 157, 89, 0.35);
+  color: var(--color-gold-light);
   font-family: var(--font-editorial);
   font-weight: 800;
   font-size: 0.88rem;
@@ -918,31 +924,31 @@ img, svg {
 }
 
 .chip-glow-dot {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
-  background-color: var(--color-cyan);
-  box-shadow: 0 0 12px var(--color-cyan);
+  background-color: var(--color-gold-champagne);
+  box-shadow: 0 0 10px var(--color-gold-champagne);
 }
 
 .chamber-grand-title {
   font-size: clamp(2.2rem, 3.6vw, 3.2rem);
   font-weight: 900;
-  color: var(--color-white);
+  color: var(--color-pearl-white);
   line-height: 1.25;
   margin-bottom: 1.6rem;
 }
 
 .chamber-lead {
   font-size: 1.2rem;
-  color: var(--color-sublight-text);
+  color: var(--color-gold-light);
   line-height: 1.85;
   margin-bottom: 1.2rem;
 }
 
 .chamber-body {
   font-size: 1.05rem;
-  color: var(--color-titanium);
+  color: var(--color-text-sublight);
   line-height: 1.85;
   margin-bottom: 2.8rem;
 }
@@ -955,7 +961,7 @@ img, svg {
 }
 
 .chamber-card {
-  background: var(--color-navy-card);
+  background: var(--color-midnight-card);
   border: 1px solid var(--color-border-dark);
   border-radius: var(--radius-sm);
   padding: 1.6rem;
@@ -963,9 +969,9 @@ img, svg {
 }
 
 .chamber-card:hover {
-  border-color: rgba(0, 210, 255, 0.35);
+  border-color: rgba(194, 157, 89, 0.4);
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(0, 210, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(11, 21, 38, 0.3);
 }
 
 .chamber-card-tag {
@@ -973,20 +979,20 @@ img, svg {
   font-family: var(--font-editorial);
   font-size: 0.72rem;
   font-weight: 800;
-  color: var(--color-cyan);
+  color: var(--color-gold-champagne);
   letter-spacing: 0.1em;
   margin-bottom: 0.6rem;
 }
 
 .chamber-card h4 {
   font-size: 1.15rem;
-  color: var(--color-white);
+  color: var(--color-pearl-white);
   margin-bottom: 0.5rem;
 }
 
 .chamber-card p {
   font-size: 0.92rem;
-  color: var(--color-titanium);
+  color: var(--color-text-sublight);
   line-height: 1.65;
 }
 
@@ -996,7 +1002,7 @@ img, svg {
 
 .schematic-canvas {
   position: relative;
-  background: var(--color-navy-card);
+  background: var(--color-midnight-card);
   border: 1px solid var(--color-border-dark);
   border-radius: var(--radius-lg);
   padding: 3rem 2rem;
@@ -1007,7 +1013,7 @@ img, svg {
   width: 100%;
   max-width: 440px;
   margin-inline: auto;
-  filter: drop-shadow(0 0 25px rgba(0, 210, 255, 0.25));
+  filter: drop-shadow(0 0 25px rgba(194, 157, 89, 0.2));
 }
 
 .schematic-hud-annotation {
@@ -1015,31 +1021,32 @@ img, svg {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  background: rgba(10, 17, 40, 0.85);
-  border: 1px solid rgba(0, 210, 255, 0.25);
+  background: rgba(11, 21, 38, 0.9);
+  border: 1px solid rgba(194, 157, 89, 0.3);
   border-radius: var(--radius-pill);
   padding: 0.55rem 1.1rem;
   font-family: var(--font-editorial);
   font-size: 0.84rem;
   font-weight: 700;
-  color: var(--color-sublight-text);
+  color: var(--color-gold-light);
   margin-top: 1.2rem;
 }
 
 .hud-marker {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
-  background-color: var(--color-cyan);
-  box-shadow: 0 0 8px var(--color-cyan);
+  background-color: var(--color-gold-champagne);
+  box-shadow: 0 0 8px var(--color-gold-champagne);
 }
 
 /* ===================================================================
-   SCENE 05: STANDARDS OF CARE & PATIENT JOURNEY
+   SCENE 05: STANDARDS OF VIP CONCIERGE CARE
    =================================================================== */
 .scene-standards {
   padding-block: 7.5rem;
-  background-color: var(--color-alabaster);
+  background-color: var(--color-pearl-white);
+  border-bottom: 1px solid var(--color-stone-border);
 }
 
 .standards-lead-header {
@@ -1052,12 +1059,13 @@ img, svg {
 .standards-main-title {
   font-size: clamp(2.2rem, 3.6vw, 3.2rem);
   font-weight: 900;
+  color: var(--color-midnight-royal);
   margin-bottom: 1.2rem;
 }
 
 .standards-lead-desc {
   font-size: 1.18rem;
-  color: var(--color-muted-text);
+  color: var(--color-text-muted);
   line-height: 1.8;
 }
 
@@ -1068,8 +1076,8 @@ img, svg {
 }
 
 .journey-step-card {
-  background-color: var(--color-white);
-  border: 1px solid var(--color-border-light);
+  background-color: var(--color-alabaster);
+  border: 1px solid var(--color-stone-border);
   border-radius: var(--radius-md);
   padding: 2.6rem 2rem;
   box-shadow: var(--shadow-subtle);
@@ -1077,17 +1085,18 @@ img, svg {
 }
 
 .journey-step-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
   box-shadow: var(--shadow-elevated);
-  border-color: var(--color-surgical-blue);
+  border-color: var(--color-gold-champagne);
 }
 
 .step-num-bubble {
-  width: 48px;
-  height: 48px;
+  width: 46px;
+  height: 46px;
   border-radius: var(--radius-sm);
-  background-color: rgba(2, 132, 199, 0.08);
-  color: var(--color-surgical-blue);
+  background-color: var(--color-pearl-white);
+  border: 1px solid var(--color-gold-champagne);
+  color: var(--color-midnight-royal);
   font-family: var(--font-editorial);
   font-size: 1.25rem;
   font-weight: 900;
@@ -1100,13 +1109,13 @@ img, svg {
 .step-title {
   font-size: 1.25rem;
   font-weight: 800;
-  color: var(--color-dark-text);
+  color: var(--color-midnight-royal);
   margin-bottom: 0.9rem;
 }
 
 .step-description {
   font-size: 0.96rem;
-  color: var(--color-muted-text);
+  color: var(--color-text-muted);
   line-height: 1.75;
 }
 
@@ -1115,7 +1124,7 @@ img, svg {
    =================================================================== */
 .scene-lounge {
   padding-block: 8rem;
-  background-color: var(--color-white);
+  background-color: var(--color-alabaster);
 }
 
 .lounge-lead-header {
@@ -1128,12 +1137,13 @@ img, svg {
 .lounge-main-title {
   font-size: clamp(2.2rem, 3.6vw, 3.2rem);
   font-weight: 900;
+  color: var(--color-midnight-royal);
   margin-bottom: 1.2rem;
 }
 
 .lounge-lead-desc {
   font-size: 1.2rem;
-  color: var(--color-muted-text);
+  color: var(--color-text-muted);
   line-height: 1.85;
 }
 
@@ -1145,8 +1155,8 @@ img, svg {
 }
 
 .lounge-form-card {
-  background-color: var(--color-alabaster);
-  border: 1px solid var(--color-border-light);
+  background-color: var(--color-pearl-white);
+  border: 1px solid var(--color-stone-border);
   border-radius: var(--radius-lg);
   padding: 3.2rem;
   box-shadow: var(--shadow-subtle);
@@ -1169,7 +1179,7 @@ img, svg {
   font-family: var(--font-editorial);
   font-size: 0.92rem;
   font-weight: 700;
-  color: var(--color-dark-text);
+  color: var(--color-midnight-royal);
   margin-bottom: 0.5rem;
 }
 
@@ -1177,18 +1187,19 @@ img, svg {
   width: 100%;
   padding: 1rem 1.2rem;
   border-radius: var(--radius-xs);
-  border: 1px solid var(--color-border-light);
-  background-color: var(--color-white);
+  border: 1px solid var(--color-stone-border);
+  background-color: var(--color-alabaster);
   font-family: var(--font-narrative);
   font-size: 1.02rem;
-  color: var(--color-dark-text);
+  color: var(--color-text-charcoal);
   outline: none;
   transition: all var(--trans-fast);
 }
 
 .field-input:focus {
-  border-color: var(--color-surgical-blue);
-  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.12);
+  border-color: var(--color-gold-champagne);
+  box-shadow: 0 0 0 3px rgba(194, 157, 89, 0.15);
+  background-color: var(--color-pearl-white);
 }
 
 .field-textarea {
@@ -1198,23 +1209,24 @@ img, svg {
 
 /* Authority Info Card */
 .lounge-info-card {
-  background-color: var(--color-navy-deep);
+  background-color: var(--color-midnight-royal);
   border-radius: var(--radius-lg);
   padding: 3.2rem;
-  color: var(--color-white);
+  color: var(--color-pearl-white);
   box-shadow: var(--shadow-prominent);
+  border: 1px solid rgba(194, 157, 89, 0.3);
 }
 
 .profile-brand-heading {
   font-size: 1.6rem;
   font-weight: 900;
-  color: var(--color-white);
+  color: var(--color-pearl-white);
   margin-bottom: 0.6rem;
 }
 
 .profile-brand-subheading {
   font-size: 0.95rem;
-  color: var(--color-cyan);
+  color: var(--color-gold-light);
   font-weight: 700;
   line-height: 1.6;
   margin-bottom: 2.2rem;
@@ -1237,7 +1249,7 @@ img, svg {
 .contact-item-tag {
   font-size: 0.8rem;
   font-weight: 700;
-  color: var(--color-titanium);
+  color: var(--color-gold-champagne);
   letter-spacing: 0.05em;
   margin-bottom: 0.25rem;
 }
@@ -1245,18 +1257,18 @@ img, svg {
 .contact-item-val {
   font-size: 1.05rem;
   font-weight: 600;
-  color: var(--color-white);
+  color: var(--color-pearl-white);
 }
 
 .hotline-val {
   font-family: var(--font-editorial);
   font-size: 1.45rem;
   font-weight: 900;
-  color: var(--color-cyan);
+  color: var(--color-gold-light);
 }
 
 .hotline-val:hover {
-  text-decoration: underline;
+  color: var(--color-gold-champagne);
 }
 
 .lounge-action-buttons {
@@ -1269,11 +1281,11 @@ img, svg {
    MASTER FOOTER
    =================================================================== */
 .master-footer {
-  background-color: var(--color-void);
+  background-color: var(--color-midnight-deep);
   padding-top: 6rem;
   padding-bottom: 3rem;
-  color: var(--color-white);
-  border-top: 1px solid var(--color-border-dark);
+  color: var(--color-pearl-white);
+  border-top: 1px solid rgba(194, 157, 89, 0.2);
 }
 
 .footer-layout {
@@ -1287,20 +1299,20 @@ img, svg {
   font-family: var(--font-editorial);
   font-size: 1.35rem;
   font-weight: 900;
-  color: var(--color-white);
+  color: var(--color-pearl-white);
   margin-bottom: 0.5rem;
 }
 
 .footer-brand-subtitle {
   font-size: 0.9rem;
-  color: var(--color-cyan);
+  color: var(--color-gold-light);
   font-weight: 700;
   margin-bottom: 1.2rem;
 }
 
 .footer-editorial-copy {
   font-size: 0.95rem;
-  color: var(--color-titanium);
+  color: var(--color-text-sublight);
   line-height: 1.8;
   max-width: 440px;
 }
@@ -1315,29 +1327,29 @@ img, svg {
   font-family: var(--font-editorial);
   font-size: 1.05rem;
   font-weight: 800;
-  color: var(--color-white);
+  color: var(--color-gold-champagne);
   margin-bottom: 0.6rem;
 }
 
 .footer-link {
   font-size: 0.95rem;
-  color: var(--color-sublight-text);
+  color: var(--color-text-sublight);
 }
 
 .footer-link:hover {
-  color: var(--color-cyan);
+  color: var(--color-gold-light);
 }
 
 .footer-bottom-line {
   padding-top: 2rem;
-  border-top: 1px solid var(--color-border-dark);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
   font-size: 0.88rem;
-  color: var(--color-titanium);
+  color: var(--color-text-muted);
 }
 
 /* ===================================================================
@@ -1345,8 +1357,8 @@ img, svg {
    =================================================================== */
 .reveal-init {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.85s var(--ease-fluid), transform 0.85s var(--ease-fluid);
+  transform: translateY(25px);
+  transition: opacity 0.85s var(--ease-royal), transform 0.85s var(--ease-royal);
 }
 
 .reveal-init.active-revealed {
@@ -1356,8 +1368,8 @@ img, svg {
 
 .reveal-on-scroll {
   opacity: 0;
-  transform: translateY(35px);
-  transition: opacity 0.85s var(--ease-fluid), transform 0.85s var(--ease-fluid);
+  transform: translateY(30px);
+  transition: opacity 0.85s var(--ease-royal), transform 0.85s var(--ease-royal);
 }
 
 .reveal-on-scroll.active-revealed {
