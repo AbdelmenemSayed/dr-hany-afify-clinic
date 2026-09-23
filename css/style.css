@@ -1,62 +1,66 @@
 /* ===================================================================
    عيادة د. هاني محمد عفيفي - استشاري أمراض وجراحة العظام والمفاصل
    Dr. Hany Mohamed Afify | Ultra-Luxury VIP Concierge Orthopedic Brand
-   Royal Warm Champagne Gold & Midnight Navy Design System
+   Aristocratic Quiet Luxury Design System (RTL)
    =================================================================== */
 
-/* --- DESIGN TOKENS (ROYAL VIP PALETTE) --- */
+/* --- DESIGN TOKENS --- */
 :root {
-  /* Royal Midnight & Ink */
-  --color-midnight-royal: #0B1526;
-  --color-midnight-card: #111E36;
-  --color-midnight-surface: #172642;
-  --color-midnight-deep: #070D18;
+  /* Warm Aristocratic Palette */
+  --bg-pearl: #FBF9F5;
+  --bg-alabaster: #F5F1E9;
+  --bg-white: #FFFFFF;
+  --bg-sand: #EFE9DF;
 
-  /* Champagne Gold & Brushed Bronze Accents */
-  --color-gold-champagne: #C29D59;
-  --color-gold-light: #E0C797;
-  --color-gold-deep: #9E7D3E;
-  --color-gold-glow: rgba(194, 157, 89, 0.22);
-  --color-gold-halo: rgba(194, 157, 89, 0.12);
+  /* Royal Midnight Navy */
+  --navy-royal: #0A1324;
+  --navy-card: #101D36;
+  --navy-deep: #060C17;
+  --navy-elevated: #162442;
 
-  /* Warm Pearl, Alabaster & Sand */
-  --color-pearl-white: #FFFFFF;
-  --color-alabaster: #FAF8F5;
-  --color-sand-soft: #F4EFEB;
-  --color-stone-border: #E8E2D8;
-  --color-stone-border-light: rgba(232, 226, 216, 0.6);
-  --color-border-dark: rgba(224, 199, 151, 0.16);
+  /* Champagne Gold & Brushed Bronze */
+  --gold-champagne: #C29D59;
+  --gold-light: #DFC48E;
+  --gold-deep: #9E7D3E;
+  --gold-glow: rgba(194, 157, 89, 0.22);
+  --gold-halo: rgba(194, 157, 89, 0.08);
 
-  /* Editorial Typography Colors */
-  --color-text-charcoal: #141A24;
-  --color-text-body: #4A5568;
-  --color-text-muted: #6B778C;
-  --color-text-light: #FFFFFF;
-  --color-text-sublight: #D9DCE3;
+  /* Hairlines & Borders */
+  --border-hairline: #E8E2D6;
+  --border-hairline-light: rgba(232, 226, 214, 0.6);
+  --border-gold: rgba(194, 157, 89, 0.35);
+  --border-dark: rgba(223, 196, 142, 0.15);
 
-  /* Typography */
+  /* Ink Typography */
+  --text-ink: #141A26;
+  --text-body: #4A5568;
+  --text-muted: #718096;
+  --text-light: #FFFFFF;
+  --text-sublight: #D5DAE3;
+
+  /* Typography Fonts */
   --font-editorial: 'Cairo', system-ui, -apple-system, sans-serif;
   --font-narrative: 'Tajawal', system-ui, -apple-system, sans-serif;
 
-  /* Geometry & Radii */
+  /* Geometry & Curve */
   --max-width: 1260px;
   --radius-xs: 4px;
   --radius-sm: 8px;
   --radius-md: 14px;
-  --radius-lg: 22px;
+  --radius-lg: 20px;
   --radius-pill: 9999px;
 
-  /* Transitions */
+  /* Fluid Royal Transitions */
   --ease-royal: cubic-bezier(0.16, 1, 0.3, 1);
   --trans-fast: 0.22s var(--ease-royal);
   --trans-med: 0.45s var(--ease-royal);
   --trans-slow: 0.85s var(--ease-royal);
 
-  /* Shadows (Natural Studio Lighting) */
-  --shadow-subtle: 0 4px 20px rgba(11, 21, 38, 0.03);
-  --shadow-elevated: 0 16px 40px rgba(11, 21, 38, 0.05);
-  --shadow-prominent: 0 24px 60px rgba(11, 21, 38, 0.09);
-  --shadow-gold-glow: 0 10px 30px var(--color-gold-glow);
+  /* Natural Studio Shadows */
+  --shadow-subtle: 0 4px 20px rgba(10, 19, 36, 0.03);
+  --shadow-elevated: 0 16px 40px rgba(10, 19, 36, 0.05);
+  --shadow-prominent: 0 24px 60px rgba(10, 19, 36, 0.09);
+  --shadow-gold-glow: 0 10px 30px var(--gold-glow);
 }
 
 /* --- RESET & FOUNDATION --- */
@@ -75,8 +79,8 @@ html {
 
 body {
   font-family: var(--font-narrative);
-  background-color: var(--color-alabaster);
-  color: var(--color-text-body);
+  background-color: var(--bg-pearl);
+  color: var(--text-body);
   line-height: 1.85;
   overflow-x: hidden;
   text-align: right;
@@ -85,14 +89,14 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-editorial);
-  color: var(--color-text-charcoal);
+  color: var(--text-ink);
   line-height: 1.25;
   font-weight: 800;
   letter-spacing: -0.015em;
 }
 
 p {
-  color: var(--color-text-body);
+  color: var(--text-body);
   font-size: 1.05rem;
 }
 
@@ -107,21 +111,21 @@ img, svg {
   max-width: 100%;
 }
 
-.content-container {
+.container {
   width: 100%;
   max-width: var(--max-width);
   margin-inline: auto;
   padding-inline: 2.2rem;
 }
 
-/* --- TOP SCROLL TRACER (CHAMPAGNE GOLD) --- */
-.scroll-tracer {
+/* --- TOP SCROLL TRACER --- */
+.scroll-gold-tracer {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--color-gold-deep), var(--color-gold-light));
+  background: linear-gradient(90deg, var(--gold-deep), var(--gold-light));
   transform-origin: right;
   transform: scaleX(0);
   z-index: 9999;
@@ -129,133 +133,129 @@ img, svg {
 }
 
 /* ===================================================================
-   MASTER VIP NAVIGATION BAR
+   ROYAL VIP HEADER & NAVIGATION
    =================================================================== */
-.master-header {
+.royal-header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(250, 248, 245, 0.94);
+  background: rgba(251, 249, 245, 0.94);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--color-stone-border);
+  border-bottom: 1px solid var(--border-hairline);
   transition: all var(--trans-med);
   height: 88px;
   display: flex;
   align-items: center;
 }
 
-.master-header.scrolled {
+.royal-header.scrolled {
   height: 74px;
   background: rgba(255, 255, 255, 0.98);
   box-shadow: var(--shadow-subtle);
 }
 
-.header-inner {
-  width: 100%;
-  max-width: var(--max-width);
-  margin-inline: auto;
-  padding-inline: 2.2rem;
+.header-flex {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
 }
 
-.brand-signature {
+.royal-brand {
   display: flex;
   align-items: center;
   gap: 1.1rem;
 }
 
-.brand-emblem {
+.royal-brand-emblem {
   height: 52px;
   width: auto;
   transition: transform var(--trans-med);
 }
 
-.brand-signature:hover .brand-emblem {
+.royal-brand:hover .royal-brand-emblem {
   transform: scale(1.04);
 }
 
-.brand-text-block {
+.royal-brand-info {
   display: flex;
   flex-direction: column;
 }
 
-.brand-name {
+.royal-doctor-name {
   font-family: var(--font-editorial);
   font-size: 1.25rem;
   font-weight: 900;
-  color: var(--color-midnight-royal);
+  color: var(--navy-royal);
   line-height: 1.2;
 }
 
-.brand-credentials {
+.royal-doctor-creds {
   font-size: 0.8rem;
   font-weight: 700;
-  color: var(--color-gold-deep);
+  color: var(--gold-deep);
   letter-spacing: 0.03em;
 }
 
-.master-nav {
+.royal-nav {
   display: flex;
   align-items: center;
   gap: 2.2rem;
 }
 
-.nav-anchor {
+.royal-nav-link {
   font-family: var(--font-editorial);
   font-size: 0.96rem;
   font-weight: 700;
-  color: var(--color-text-muted);
+  color: var(--text-muted);
   position: relative;
   padding-block: 0.4rem;
 }
 
-.nav-anchor::after {
+.royal-nav-link::after {
   content: '';
   position: absolute;
   bottom: 0;
   right: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--color-gold-deep), var(--color-gold-light));
+  background: linear-gradient(90deg, var(--gold-deep), var(--gold-light));
   transition: width var(--trans-med);
   border-radius: var(--radius-pill);
 }
 
-.nav-anchor:hover,
-.nav-anchor.active {
-  color: var(--color-midnight-royal);
+.royal-nav-link:hover,
+.royal-nav-link.active {
+  color: var(--navy-royal);
 }
 
-.nav-anchor:hover::after,
-.nav-anchor.active::after {
+.royal-nav-link:hover::after,
+.royal-nav-link.active::after {
   width: 100%;
 }
 
-.header-actions {
+.royal-header-actions {
   display: flex;
   align-items: center;
   gap: 1.6rem;
 }
 
-.header-direct-phone {
+.royal-phone-link {
   font-family: var(--font-editorial);
   font-weight: 800;
   font-size: 1.05rem;
-  color: var(--color-midnight-royal);
+  color: var(--navy-royal);
 }
 
-.header-direct-phone:hover {
-  color: var(--color-gold-deep);
+.royal-phone-link:hover {
+  color: var(--gold-deep);
 }
 
 /* ===================================================================
-   ROYAL LUXURY BUTTONS
+   ROYAL VIP BUTTONS
    =================================================================== */
-.btn-luxe {
+.btn-royal {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -273,7 +273,7 @@ img, svg {
   text-align: center;
 }
 
-.btn-luxe::after {
+.btn-royal::after {
   content: '';
   position: absolute;
   top: -50%;
@@ -291,91 +291,91 @@ img, svg {
   pointer-events: none;
 }
 
-.btn-luxe:hover::after {
+.btn-royal:hover::after {
   left: 140%;
 }
 
-.btn-luxe-primary {
-  background-color: var(--color-midnight-royal);
-  color: var(--color-pearl-white);
-  border: 1px solid var(--color-gold-deep);
-  box-shadow: 0 4px 16px rgba(11, 21, 38, 0.12);
+.btn-royal-navy {
+  background-color: var(--navy-royal);
+  color: var(--bg-white);
+  border: 1px solid var(--gold-deep);
+  box-shadow: 0 4px 16px rgba(10, 19, 36, 0.12);
 }
 
-.btn-luxe-primary:hover {
-  background-color: var(--color-gold-champagne);
-  color: var(--color-midnight-royal);
-  border-color: var(--color-gold-champagne);
+.btn-royal-navy:hover {
+  background-color: var(--gold-champagne);
+  color: var(--navy-royal);
+  border-color: var(--gold-champagne);
   transform: translateY(-2px);
   box-shadow: var(--shadow-gold-glow);
 }
 
-.btn-luxe-secondary {
-  background-color: transparent;
-  color: var(--color-midnight-royal);
-  border: 1px solid var(--color-stone-border);
-}
-
-.btn-luxe-secondary:hover {
-  background-color: var(--color-pearl-white);
-  border-color: var(--color-gold-champagne);
-  transform: translateY(-2px);
-}
-
-.btn-luxe-gold {
-  background: linear-gradient(135deg, var(--color-gold-deep), var(--color-gold-champagne));
-  color: var(--color-midnight-royal);
+.btn-royal-gold {
+  background: linear-gradient(135deg, var(--gold-deep), var(--gold-champagne));
+  color: var(--navy-royal);
   font-weight: 900;
   border: none;
-  box-shadow: 0 6px 24px var(--color-gold-glow);
+  box-shadow: 0 6px 22px var(--gold-glow);
 }
 
-.btn-luxe-gold:hover {
+.btn-royal-gold:hover {
+  background: linear-gradient(135deg, var(--gold-champagne), var(--gold-light));
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px var(--color-gold-glow);
-  background: linear-gradient(135deg, var(--color-gold-champagne), var(--color-gold-light));
+  box-shadow: 0 10px 30px var(--gold-glow);
 }
 
-.btn-luxe-outline-light {
+.btn-royal-outline {
   background-color: transparent;
-  color: var(--color-pearl-white);
-  border: 1px solid rgba(224, 199, 151, 0.35);
+  color: var(--navy-royal);
+  border: 1px solid var(--border-hairline);
 }
 
-.btn-luxe-outline-light:hover {
+.btn-royal-outline:hover {
+  background-color: var(--bg-white);
+  border-color: var(--gold-champagne);
+  transform: translateY(-2px);
+}
+
+.btn-royal-outline-light {
+  background-color: transparent;
+  color: var(--bg-white);
+  border: 1px solid rgba(223, 196, 142, 0.35);
+}
+
+.btn-royal-outline-light:hover {
   background-color: rgba(194, 157, 89, 0.12);
-  border-color: var(--color-gold-champagne);
-  color: var(--color-gold-light);
+  border-color: var(--gold-champagne);
+  color: var(--gold-light);
 }
 
-.btn-luxe-whatsapp {
+.btn-royal-whatsapp {
   background-color: #128C7E;
-  color: var(--color-pearl-white);
+  color: var(--bg-white);
   border: none;
 }
 
-.btn-luxe-whatsapp:hover {
+.btn-royal-whatsapp:hover {
   background-color: #075E54;
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(18, 140, 126, 0.3);
 }
 
-.btn-block {
+.btn-full {
   width: 100%;
 }
 
 /* ===================================================================
-   SCENE 01: THE IMPERIAL OVERTURE (HERO)
+   1. THE IMPERIAL COVER (HERO)
    =================================================================== */
-.scene-overture {
+.imperial-cover-section {
   position: relative;
-  background-color: var(--color-alabaster);
+  background-color: var(--bg-pearl);
   padding-block: 5.5rem 6.5rem;
   overflow: hidden;
-  border-bottom: 1px solid var(--color-stone-border);
+  border-bottom: 1px solid var(--border-hairline);
 }
 
-.overture-ambient-backdrop {
+.cover-ambient-glow {
   position: absolute;
   inset: 0;
   pointer-events: none;
@@ -383,30 +383,30 @@ img, svg {
   z-index: 0;
 }
 
-.ambient-glow-sphere {
+.ambient-orb {
   position: absolute;
   border-radius: 50%;
   filter: blur(120px);
   opacity: 0.25;
 }
 
-.sphere-primary {
+.ambient-orb-gold {
   width: 550px;
   height: 550px;
-  background: radial-gradient(circle, var(--color-gold-glow) 0%, transparent 70%);
+  background: radial-gradient(circle, var(--gold-glow) 0%, transparent 70%);
   top: -120px;
   right: -80px;
 }
 
-.sphere-cyan {
+.ambient-orb-navy {
   width: 480px;
   height: 480px;
-  background: radial-gradient(circle, rgba(17, 30, 54, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(10, 19, 36, 0.08) 0%, transparent 70%);
   bottom: -100px;
   left: -80px;
 }
 
-.surgical-grid-mesh {
+.royal-mesh-texture {
   position: absolute;
   inset: 0;
   background-image: 
@@ -415,7 +415,7 @@ img, svg {
   background-size: 60px 60px;
 }
 
-.overture-layout {
+.imperial-cover-grid {
   position: relative;
   z-index: 1;
   display: grid;
@@ -424,15 +424,15 @@ img, svg {
   gap: 4.8rem;
 }
 
-.prestige-tag {
+.vip-status-chip {
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
   padding: 0.45rem 1.2rem;
   border-radius: var(--radius-pill);
-  background-color: var(--color-pearl-white);
-  border: 1px solid var(--color-gold-champagne);
-  color: var(--color-gold-deep);
+  background-color: var(--bg-white);
+  border: 1px solid var(--gold-champagne);
+  color: var(--gold-deep);
   font-family: var(--font-editorial);
   font-weight: 700;
   font-size: 0.86rem;
@@ -440,56 +440,56 @@ img, svg {
   box-shadow: 0 2px 10px rgba(194, 157, 89, 0.08);
 }
 
-.tag-pulse {
+.vip-chip-dot {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background-color: var(--color-gold-champagne);
-  box-shadow: 0 0 8px var(--color-gold-champagne);
+  background-color: var(--gold-champagne);
+  box-shadow: 0 0 8px var(--gold-champagne);
 }
 
-.overture-headline {
+.imperial-headline {
   font-size: clamp(2.3rem, 3.8vw, 3.4rem);
   font-weight: 900;
-  color: var(--color-midnight-royal);
+  color: var(--navy-royal);
   line-height: 1.24;
   margin-bottom: 1.6rem;
 }
 
-.doctor-prestige-card {
-  border-right: 3px solid var(--color-gold-champagne);
+.presidential-creds-strip {
+  border-right: 3px solid var(--gold-champagne);
   padding-right: 1.4rem;
   margin-bottom: 1.8rem;
 }
 
-.prestige-name {
+.creds-name {
   font-family: var(--font-editorial);
   font-size: 1.45rem;
   font-weight: 900;
-  color: var(--color-midnight-royal);
+  color: var(--navy-royal);
   line-height: 1.25;
 }
 
-.prestige-degree {
+.creds-academic {
   font-size: 1.05rem;
   font-weight: 700;
-  color: var(--color-gold-deep);
+  color: var(--gold-deep);
 }
 
-.prestige-specialty {
+.creds-post {
   font-size: 0.95rem;
-  color: var(--color-text-muted);
+  color: var(--text-muted);
 }
 
-.overture-lead-text {
+.imperial-narrative {
   font-size: 1.15rem;
-  color: var(--color-text-body);
+  color: var(--text-body);
   line-height: 1.85;
   margin-bottom: 2.4rem;
   max-width: 580px;
 }
 
-.overture-cta-row {
+.cover-cta-cluster {
   display: flex;
   align-items: center;
   gap: 1.2rem;
@@ -497,63 +497,63 @@ img, svg {
   flex-wrap: wrap;
 }
 
-.overture-metrics-bar {
+.cover-telemetry-row {
   display: flex;
   align-items: center;
   gap: 2.2rem;
   padding-top: 2rem;
-  border-top: 1px solid var(--color-stone-border);
+  border-top: 1px solid var(--border-hairline);
 }
 
-.micro-metric {
+.telemetry-cell {
   display: flex;
   flex-direction: column;
 }
 
-.metric-num {
+.telemetry-number {
   font-family: var(--font-editorial);
   font-size: 1.65rem;
   font-weight: 900;
-  color: var(--color-midnight-royal);
+  color: var(--navy-royal);
   line-height: 1.1;
 }
 
-.metric-lbl {
+.telemetry-label {
   font-size: 0.84rem;
-  color: var(--color-text-muted);
+  color: var(--text-muted);
   font-weight: 500;
 }
 
-.micro-metric-divider {
+.telemetry-sep {
   width: 1px;
   height: 38px;
-  background-color: var(--color-stone-border);
+  background-color: var(--border-hairline);
 }
 
-/* Portrait Visual Frame */
-.overture-visual-column {
+/* Portrait Regal Chassis */
+.cover-visual-wrap {
   position: relative;
 }
 
-.visual-portrait-chassis {
+.regal-portrait-frame {
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-prominent);
-  background-color: var(--color-pearl-white);
-  border: 1px solid var(--color-gold-champagne);
+  background-color: var(--bg-white);
+  border: 1px solid var(--gold-champagne);
   transition: transform var(--trans-slow);
 }
 
-.portrait-halo {
+.portrait-warm-halo {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 65%, rgba(11, 21, 38, 0.75) 100%);
+  background: linear-gradient(180deg, transparent 65%, rgba(10, 19, 36, 0.75) 100%);
   z-index: 1;
   pointer-events: none;
 }
 
-.doctor-art-portrait {
+.regal-portrait-img {
   width: 100%;
   height: 570px;
   object-fit: cover;
@@ -562,17 +562,17 @@ img, svg {
   transition: transform var(--trans-slow);
 }
 
-.visual-portrait-chassis:hover .doctor-art-portrait {
+.regal-portrait-frame:hover .regal-portrait-img {
   transform: scale(1.02);
 }
 
-.hud-status-badge {
+.portrait-hud-card {
   position: absolute;
   bottom: 24px;
   right: 24px;
   left: 24px;
   z-index: 2;
-  background: rgba(11, 21, 38, 0.92);
+  background: rgba(10, 19, 36, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(194, 157, 89, 0.35);
@@ -583,113 +583,113 @@ img, svg {
   gap: 1rem;
 }
 
-.hud-status-icon {
+.hud-golden-dot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: var(--color-gold-champagne);
-  box-shadow: 0 0 12px var(--color-gold-champagne);
+  background-color: var(--gold-champagne);
+  box-shadow: 0 0 12px var(--gold-champagne);
   flex-shrink: 0;
 }
 
-.hud-status-info {
+.hud-text-group {
   display: flex;
   flex-direction: column;
 }
 
-.hud-title {
+.hud-main {
   font-family: var(--font-editorial);
   font-size: 0.95rem;
   font-weight: 800;
-  color: var(--color-pearl-white);
+  color: var(--bg-white);
   line-height: 1.25;
 }
 
-.hud-sub {
+.hud-secondary {
   font-size: 0.82rem;
-  color: var(--color-gold-light);
+  color: var(--gold-light);
 }
 
 /* ===================================================================
-   SCENE 02: HUMAN MANIFESTO & PHILOSOPHY
+   2. THE CONSULTANT'S CREDO & PHILOSOPHY
    =================================================================== */
-.scene-manifesto {
+.credo-section {
   padding-block: 6.5rem;
-  background-color: var(--color-pearl-white);
+  background-color: var(--bg-white);
   position: relative;
-  border-bottom: 1px solid var(--color-stone-border);
+  border-bottom: 1px solid var(--border-hairline);
 }
 
-.manifesto-card-grand {
-  background-color: var(--color-alabaster);
+.credo-grand-card {
+  background-color: var(--bg-alabaster);
   border-radius: var(--radius-lg);
   padding: 4.5rem;
   box-shadow: var(--shadow-elevated);
-  border: 1px solid var(--color-stone-border);
+  border: 1px solid var(--border-hairline);
 }
 
-.section-kicker {
+.royal-kicker {
   display: inline-block;
   font-family: var(--font-editorial);
   font-size: 0.88rem;
   font-weight: 700;
-  color: var(--color-gold-deep);
+  color: var(--gold-deep);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 1.2rem;
 }
 
-.manifesto-declaration {
+.credo-main-quote {
   font-size: clamp(1.8rem, 3vw, 2.5rem);
   font-weight: 800;
-  color: var(--color-midnight-royal);
+  color: var(--navy-royal);
   line-height: 1.45;
   margin-bottom: 3.5rem;
   max-width: 1040px;
 }
 
-.manifesto-body-grid {
+.credo-content-grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 4rem;
   align-items: start;
 }
 
-.narrative-highlight {
+.narrative-p-large {
   font-size: 1.2rem;
   line-height: 1.9;
-  color: var(--color-midnight-royal);
+  color: var(--navy-royal);
   margin-bottom: 1.5rem;
   font-weight: 500;
 }
 
-.narrative-sub {
+.narrative-p-sub {
   font-size: 1.05rem;
   line-height: 1.85;
-  color: var(--color-text-body);
+  color: var(--text-body);
 }
 
-.manifesto-pillars-list {
+.credo-pillars-stack {
   display: flex;
   flex-direction: column;
   gap: 1.8rem;
-  border-right: 1px solid var(--color-stone-border);
+  border-right: 1px solid var(--border-hairline);
   padding-right: 2rem;
 }
 
-.pillar-row {
+.credo-pillar-item {
   display: flex;
   gap: 1.4rem;
   align-items: flex-start;
 }
 
-.pillar-index {
+.pillar-roman-num {
   font-family: var(--font-editorial);
   font-size: 1.1rem;
   font-weight: 900;
-  color: var(--color-midnight-royal);
-  background-color: var(--color-pearl-white);
-  border: 1px solid var(--color-gold-champagne);
+  color: var(--navy-royal);
+  background-color: var(--bg-white);
+  border: 1px solid var(--gold-champagne);
   width: 44px;
   height: 44px;
   border-radius: var(--radius-sm);
@@ -699,76 +699,148 @@ img, svg {
   flex-shrink: 0;
 }
 
-.pillar-text h4 {
+.pillar-info h4 {
   font-size: 1.15rem;
-  color: var(--color-midnight-royal);
+  color: var(--navy-royal);
   margin-bottom: 0.35rem;
 }
 
-.pillar-text p {
+.pillar-info p {
   font-size: 0.95rem;
-  color: var(--color-text-muted);
+  color: var(--text-muted);
   line-height: 1.6;
 }
 
 /* ===================================================================
-   SCENE 03: THE 6 CLINICAL CASE CHAPTERS
+   3. THE CURATED LUXURY SPECIALTY SHOWCASE
    =================================================================== */
-.scene-chapters {
+.specialty-showcase-section {
   padding-block: 7.5rem;
-  background-color: var(--color-alabaster);
+  background-color: var(--bg-pearl);
+  border-bottom: 1px solid var(--border-hairline);
 }
 
-.chapters-intro-header {
+.showcase-lead-header {
+  text-align: center;
   max-width: 820px;
-  margin-bottom: 5.5rem;
+  margin-inline: auto;
+  margin-bottom: 3.5rem;
 }
 
-.chapters-main-title {
+.showcase-title {
   font-size: clamp(2.2rem, 3.8vw, 3.2rem);
   font-weight: 900;
-  color: var(--color-midnight-royal);
+  color: var(--navy-royal);
   margin-bottom: 1.2rem;
 }
 
-.chapters-intro-desc {
+.showcase-subtitle {
   font-size: 1.2rem;
-  color: var(--color-text-muted);
+  color: var(--text-muted);
   line-height: 1.85;
 }
 
-/* Chapter Feature (Alternating Storytelling) */
-.chapter-feature {
+/* Master Showcase Stage */
+.luxury-showcase-stage {
+  background-color: var(--bg-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-hairline);
+  box-shadow: var(--shadow-prominent);
+  overflow: hidden;
+}
+
+.showcase-tabs-bar {
+  display: flex;
+  overflow-x: auto;
+  background-color: var(--bg-alabaster);
+  border-bottom: 1px solid var(--border-hairline);
+  scrollbar-width: none;
+}
+
+.showcase-tabs-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.showcase-tab-btn {
+  flex: 1;
+  min-width: 170px;
+  padding: 1.4rem 1.2rem;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-editorial);
+  transition: all var(--trans-med);
+  text-align: center;
+}
+
+.tab-index {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--gold-deep);
+  letter-spacing: 0.1em;
+}
+
+.tab-name {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  transition: color var(--trans-fast);
+}
+
+.showcase-tab-btn:hover .tab-name {
+  color: var(--navy-royal);
+}
+
+.showcase-tab-btn.active {
+  background-color: var(--bg-white);
+  border-bottom-color: var(--gold-champagne);
+}
+
+.showcase-tab-btn.active .tab-name {
+  color: var(--navy-royal);
+  font-weight: 900;
+}
+
+/* Showcase Panes Deck */
+.showcase-panes-deck {
+  padding: 3.5rem;
+}
+
+.showcase-pane {
+  display: none;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.4s var(--ease-royal), transform 0.4s var(--ease-royal);
+}
+
+.showcase-pane.active-pane {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pane-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 5rem;
-  padding-block: 4.5rem;
-  border-bottom: 1px solid var(--color-stone-border);
+  gap: 4.5rem;
 }
 
-.chapter-feature:last-child {
-  border-bottom: none;
-}
-
-.chapter-reverse {
-  direction: ltr;
-}
-
-.chapter-reverse .chapter-content-wrapper {
-  direction: rtl;
-}
-
-.chapter-visual-wrapper {
+.pane-media-frame {
   position: relative;
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-elevated);
-  background-color: var(--color-pearl-white);
-  border: 1px solid var(--color-stone-border);
+  border: 1px solid var(--border-hairline);
+  background-color: var(--bg-pearl);
 }
 
-.chapter-img {
+.pane-photo {
   width: 100%;
   height: 440px;
   object-fit: cover;
@@ -776,20 +848,20 @@ img, svg {
   transition: transform var(--trans-slow);
 }
 
-.chapter-visual-wrapper:hover .chapter-img {
+.pane-media-frame:hover .pane-photo {
   transform: scale(1.03);
 }
 
-.chapter-badge {
+.pane-photo-tag {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  background: rgba(11, 21, 38, 0.9);
+  top: 18px;
+  right: 18px;
+  background: rgba(10, 19, 36, 0.9);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  color: var(--color-gold-light);
+  color: var(--gold-light);
   font-family: var(--font-editorial);
-  font-size: 0.76rem;
+  font-size: 0.74rem;
   font-weight: 800;
   letter-spacing: 0.12em;
   padding: 0.4rem 0.95rem;
@@ -797,101 +869,89 @@ img, svg {
   border: 1px solid rgba(194, 157, 89, 0.4);
 }
 
-.chapter-content-wrapper {
+.pane-editorial-body {
   display: flex;
   flex-direction: column;
 }
 
-.chapter-meta-line {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-  margin-bottom: 0.85rem;
-}
-
-.chapter-num {
+.pane-kicker-tag {
   font-family: var(--font-editorial);
-  font-size: 0.9rem;
-  font-weight: 800;
-  color: var(--color-gold-deep);
-}
-
-.chapter-topic {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 700;
-  color: var(--color-text-muted);
+  color: var(--gold-deep);
+  margin-bottom: 0.6rem;
 }
 
-.chapter-title {
+.pane-main-heading {
   font-size: clamp(1.6rem, 2.4vw, 2.1rem);
   font-weight: 800;
-  color: var(--color-midnight-royal);
-  line-height: 1.3;
+  color: var(--navy-royal);
+  line-height: 1.32;
   margin-bottom: 1.25rem;
 }
 
-.chapter-description {
+.pane-lead-text {
   font-size: 1.05rem;
   line-height: 1.85;
-  color: var(--color-text-body);
+  color: var(--text-body);
   margin-bottom: 1.8rem;
 }
 
-.chapter-points-grid {
+.pane-features-list {
   display: grid;
   grid-template-columns: 1fr;
   gap: 0.75rem;
   margin-bottom: 2.2rem;
-  background-color: var(--color-pearl-white);
+  background-color: var(--bg-alabaster);
   padding: 1.5rem;
   border-radius: var(--radius-sm);
-  border: 1px solid var(--color-stone-border);
+  border: 1px solid var(--border-hairline);
 }
 
-.chapter-point-item {
+.pane-feature-item {
   font-size: 0.96rem;
-  color: var(--color-text-charcoal);
+  color: var(--text-ink);
   font-weight: 600;
 }
 
-.chapter-action-box {
+.pane-action-wrap {
   display: flex;
 }
 
 /* ===================================================================
-   SCENE 04: THE ILIZAROV INNOVATION CHAMBER (ROYAL MIDNIGHT & GOLD)
+   4. THE ILIZAROV INNOVATION CHAMBER (ROYAL MIDNIGHT & GOLD)
    =================================================================== */
-.scene-ilizarov-chamber {
+.ilizarov-suite-section {
   position: relative;
-  background-color: var(--color-midnight-royal);
+  background-color: var(--navy-royal);
   padding-block: 8.5rem;
   overflow: hidden;
-  color: var(--color-pearl-white);
+  color: var(--bg-white);
 }
 
-.chamber-ambient-orbs {
+.suite-ambient-glow {
   position: absolute;
   inset: 0;
   pointer-events: none;
   overflow: hidden;
 }
 
-.chamber-orb {
+.suite-orb {
   position: absolute;
   border-radius: 50%;
   filter: blur(140px);
   opacity: 0.2;
 }
 
-.chamber-orb-cyan {
+.orb-gold-large {
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, var(--color-gold-champagne) 0%, transparent 70%);
+  background: radial-gradient(circle, var(--gold-champagne) 0%, transparent 70%);
   top: -150px;
   right: -100px;
 }
 
-.chamber-orb-blue {
+.orb-navy-deep {
   width: 500px;
   height: 500px;
   background: radial-gradient(circle, #1E3A8A 0%, transparent 70%);
@@ -899,7 +959,7 @@ img, svg {
   left: -50px;
 }
 
-.chamber-grid {
+.suite-editorial-grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 5rem;
@@ -908,7 +968,7 @@ img, svg {
   z-index: 1;
 }
 
-.chamber-chip {
+.suite-prestige-chip {
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
@@ -916,187 +976,187 @@ img, svg {
   border-radius: var(--radius-pill);
   background-color: rgba(194, 157, 89, 0.1);
   border: 1px solid rgba(194, 157, 89, 0.35);
-  color: var(--color-gold-light);
+  color: var(--gold-light);
   font-family: var(--font-editorial);
   font-weight: 800;
   font-size: 0.88rem;
   margin-bottom: 1.6rem;
 }
 
-.chip-glow-dot {
+.suite-chip-dot {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background-color: var(--color-gold-champagne);
-  box-shadow: 0 0 10px var(--color-gold-champagne);
+  background-color: var(--gold-champagne);
+  box-shadow: 0 0 10px var(--gold-champagne);
 }
 
-.chamber-grand-title {
+.suite-grand-title {
   font-size: clamp(2.2rem, 3.6vw, 3.2rem);
   font-weight: 900;
-  color: var(--color-pearl-white);
+  color: var(--bg-white);
   line-height: 1.25;
   margin-bottom: 1.6rem;
 }
 
-.chamber-lead {
+.suite-lead-p {
   font-size: 1.2rem;
-  color: var(--color-gold-light);
+  color: var(--gold-light);
   line-height: 1.85;
   margin-bottom: 1.2rem;
 }
 
-.chamber-body {
+.suite-sub-p {
   font-size: 1.05rem;
-  color: var(--color-text-sublight);
+  color: var(--text-sublight);
   line-height: 1.85;
   margin-bottom: 2.8rem;
 }
 
-.chamber-cards-array {
+.suite-quad-cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.4rem;
   margin-bottom: 3.2rem;
 }
 
-.chamber-card {
-  background: var(--color-midnight-card);
-  border: 1px solid var(--color-border-dark);
+.suite-card {
+  background: var(--navy-card);
+  border: 1px solid var(--border-dark);
   border-radius: var(--radius-sm);
   padding: 1.6rem;
   transition: all var(--trans-med);
 }
 
-.chamber-card:hover {
+.suite-card:hover {
   border-color: rgba(194, 157, 89, 0.4);
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(11, 21, 38, 0.3);
+  box-shadow: 0 10px 30px rgba(10, 19, 36, 0.3);
 }
 
-.chamber-card-tag {
+.card-micro-tag {
   display: block;
   font-family: var(--font-editorial);
   font-size: 0.72rem;
   font-weight: 800;
-  color: var(--color-gold-champagne);
+  color: var(--gold-champagne);
   letter-spacing: 0.1em;
   margin-bottom: 0.6rem;
 }
 
-.chamber-card h4 {
+.suite-card h4 {
   font-size: 1.15rem;
-  color: var(--color-pearl-white);
+  color: var(--bg-white);
   margin-bottom: 0.5rem;
 }
 
-.chamber-card p {
+.suite-card p {
   font-size: 0.92rem;
-  color: var(--color-text-sublight);
+  color: var(--text-sublight);
   line-height: 1.65;
 }
 
-.chamber-schematic-column {
+.suite-schematic-wrap {
   position: relative;
 }
 
-.schematic-canvas {
+.schematic-regal-card {
   position: relative;
-  background: var(--color-midnight-card);
-  border: 1px solid var(--color-border-dark);
+  background: var(--navy-card);
+  border: 1px solid var(--border-dark);
   border-radius: var(--radius-lg);
   padding: 3rem 2rem;
   box-shadow: var(--shadow-prominent);
 }
 
-.schematic-vector-img {
+.schematic-vector-art {
   width: 100%;
   max-width: 440px;
   margin-inline: auto;
   filter: drop-shadow(0 0 25px rgba(194, 157, 89, 0.2));
 }
 
-.schematic-hud-annotation {
+.schematic-hud-item {
   position: relative;
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  background: rgba(11, 21, 38, 0.9);
+  background: rgba(10, 19, 36, 0.9);
   border: 1px solid rgba(194, 157, 89, 0.3);
   border-radius: var(--radius-pill);
   padding: 0.55rem 1.1rem;
   font-family: var(--font-editorial);
   font-size: 0.84rem;
   font-weight: 700;
-  color: var(--color-gold-light);
+  color: var(--gold-light);
   margin-top: 1.2rem;
 }
 
-.hud-marker {
+.hud-pip {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background-color: var(--color-gold-champagne);
-  box-shadow: 0 0 8px var(--color-gold-champagne);
+  background-color: var(--gold-champagne);
+  box-shadow: 0 0 8px var(--gold-champagne);
 }
 
 /* ===================================================================
-   SCENE 05: STANDARDS OF VIP CONCIERGE CARE
+   5. THE CONCIERGE PATIENT JOURNEY
    =================================================================== */
-.scene-standards {
+.concierge-journey-section {
   padding-block: 7.5rem;
-  background-color: var(--color-pearl-white);
-  border-bottom: 1px solid var(--color-stone-border);
+  background-color: var(--bg-white);
+  border-bottom: 1px solid var(--border-hairline);
 }
 
-.standards-lead-header {
+.journey-lead-header {
   text-align: center;
   max-width: 780px;
   margin-inline: auto;
   margin-bottom: 4.8rem;
 }
 
-.standards-main-title {
+.journey-main-title {
   font-size: clamp(2.2rem, 3.6vw, 3.2rem);
   font-weight: 900;
-  color: var(--color-midnight-royal);
+  color: var(--navy-royal);
   margin-bottom: 1.2rem;
 }
 
-.standards-lead-desc {
+.journey-lead-desc {
   font-size: 1.18rem;
-  color: var(--color-text-muted);
+  color: var(--text-muted);
   line-height: 1.8;
 }
 
-.journey-track-grid {
+.journey-steps-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.8rem;
 }
 
-.journey-step-card {
-  background-color: var(--color-alabaster);
-  border: 1px solid var(--color-stone-border);
+.journey-card {
+  background-color: var(--bg-alabaster);
+  border: 1px solid var(--border-hairline);
   border-radius: var(--radius-md);
   padding: 2.6rem 2rem;
   box-shadow: var(--shadow-subtle);
   transition: all var(--trans-med);
 }
 
-.journey-step-card:hover {
+.journey-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-elevated);
-  border-color: var(--color-gold-champagne);
+  border-color: var(--gold-champagne);
 }
 
-.step-num-bubble {
+.step-badge {
   width: 46px;
   height: 46px;
   border-radius: var(--radius-sm);
-  background-color: var(--color-pearl-white);
-  border: 1px solid var(--color-gold-champagne);
-  color: var(--color-midnight-royal);
+  background-color: var(--bg-white);
+  border: 1px solid var(--gold-champagne);
+  color: var(--navy-royal);
   font-family: var(--font-editorial);
   font-size: 1.25rem;
   font-weight: 900;
@@ -1106,25 +1166,25 @@ img, svg {
   margin-bottom: 1.6rem;
 }
 
-.step-title {
+.step-card-title {
   font-size: 1.25rem;
   font-weight: 800;
-  color: var(--color-midnight-royal);
+  color: var(--navy-royal);
   margin-bottom: 0.9rem;
 }
 
-.step-description {
+.step-card-text {
   font-size: 0.96rem;
-  color: var(--color-text-muted);
+  color: var(--text-muted);
   line-height: 1.75;
 }
 
 /* ===================================================================
-   SCENE 06: PRIVATE CONSULTATION LOUNGE (BOOKING & CONTACT)
+   6. VIP APPOINTMENT SUITE (BOOKING & CONTACT)
    =================================================================== */
-.scene-lounge {
+.vip-lounge-section {
   padding-block: 8rem;
-  background-color: var(--color-alabaster);
+  background-color: var(--bg-pearl);
 }
 
 .lounge-lead-header {
@@ -1137,39 +1197,39 @@ img, svg {
 .lounge-main-title {
   font-size: clamp(2.2rem, 3.6vw, 3.2rem);
   font-weight: 900;
-  color: var(--color-midnight-royal);
+  color: var(--navy-royal);
   margin-bottom: 1.2rem;
 }
 
 .lounge-lead-desc {
   font-size: 1.2rem;
-  color: var(--color-text-muted);
+  color: var(--text-muted);
   line-height: 1.85;
 }
 
-.lounge-suite-grid {
+.vip-suite-grid {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   gap: 3.5rem;
   align-items: start;
 }
 
-.lounge-form-card {
-  background-color: var(--color-pearl-white);
-  border: 1px solid var(--color-stone-border);
+.vip-form-card {
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-hairline);
   border-radius: var(--radius-lg);
   padding: 3.2rem;
   box-shadow: var(--shadow-subtle);
 }
 
-.form-group-duo {
+.form-row-duo {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.4rem;
   margin-bottom: 1.4rem;
 }
 
-.form-field-unit {
+.field-wrap {
   display: flex;
   flex-direction: column;
   margin-bottom: 1.4rem;
@@ -1179,7 +1239,7 @@ img, svg {
   font-family: var(--font-editorial);
   font-size: 0.92rem;
   font-weight: 700;
-  color: var(--color-midnight-royal);
+  color: var(--navy-royal);
   margin-bottom: 0.5rem;
 }
 
@@ -1187,19 +1247,19 @@ img, svg {
   width: 100%;
   padding: 1rem 1.2rem;
   border-radius: var(--radius-xs);
-  border: 1px solid var(--color-stone-border);
-  background-color: var(--color-alabaster);
+  border: 1px solid var(--border-hairline);
+  background-color: var(--bg-alabaster);
   font-family: var(--font-narrative);
   font-size: 1.02rem;
-  color: var(--color-text-charcoal);
+  color: var(--text-ink);
   outline: none;
   transition: all var(--trans-fast);
 }
 
 .field-input:focus {
-  border-color: var(--color-gold-champagne);
+  border-color: var(--gold-champagne);
   box-shadow: 0 0 0 3px rgba(194, 157, 89, 0.15);
-  background-color: var(--color-pearl-white);
+  background-color: var(--bg-white);
 }
 
 .field-textarea {
@@ -1207,140 +1267,140 @@ img, svg {
   resize: vertical;
 }
 
-/* Authority Info Card */
-.lounge-info-card {
-  background-color: var(--color-midnight-royal);
+/* Authority Clinic Info Card */
+.vip-info-card {
+  background-color: var(--navy-royal);
   border-radius: var(--radius-lg);
   padding: 3.2rem;
-  color: var(--color-pearl-white);
+  color: var(--bg-white);
   box-shadow: var(--shadow-prominent);
   border: 1px solid rgba(194, 157, 89, 0.3);
 }
 
-.profile-brand-heading {
+.clinic-brand-name {
   font-size: 1.6rem;
   font-weight: 900;
-  color: var(--color-pearl-white);
+  color: var(--bg-white);
   margin-bottom: 0.6rem;
 }
 
-.profile-brand-subheading {
+.clinic-brand-sub {
   font-size: 0.95rem;
-  color: var(--color-gold-light);
+  color: var(--gold-light);
   font-weight: 700;
   line-height: 1.6;
   margin-bottom: 2.2rem;
 }
 
-.contact-details-list {
+.clinic-contact-items {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
   margin-bottom: 2.6rem;
-  border-top: 1px solid var(--color-border-dark);
+  border-top: 1px solid var(--border-dark);
   padding-top: 1.8rem;
 }
 
-.contact-item {
+.contact-entry {
   display: flex;
   flex-direction: column;
 }
 
-.contact-item-tag {
+.entry-tag {
   font-size: 0.8rem;
   font-weight: 700;
-  color: var(--color-gold-champagne);
+  color: var(--gold-champagne);
   letter-spacing: 0.05em;
   margin-bottom: 0.25rem;
 }
 
-.contact-item-val {
+.entry-val {
   font-size: 1.05rem;
   font-weight: 600;
-  color: var(--color-pearl-white);
+  color: var(--bg-white);
 }
 
-.hotline-val {
+.hotline-highlight {
   font-family: var(--font-editorial);
   font-size: 1.45rem;
   font-weight: 900;
-  color: var(--color-gold-light);
+  color: var(--gold-light);
 }
 
-.hotline-val:hover {
-  color: var(--color-gold-champagne);
+.hotline-highlight:hover {
+  color: var(--gold-champagne);
 }
 
-.lounge-action-buttons {
+.clinic-action-stack {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
 /* ===================================================================
-   MASTER FOOTER
+   ROYAL VIP FOOTER
    =================================================================== */
-.master-footer {
-  background-color: var(--color-midnight-deep);
+.royal-footer {
+  background-color: var(--navy-deep);
   padding-top: 6rem;
   padding-bottom: 3rem;
-  color: var(--color-pearl-white);
+  color: var(--bg-white);
   border-top: 1px solid rgba(194, 157, 89, 0.2);
 }
 
-.footer-layout {
+.footer-columns-grid {
   display: grid;
   grid-template-columns: 1.3fr 0.9fr 0.8fr;
   gap: 4rem;
   margin-bottom: 4rem;
 }
 
-.footer-brand-title {
+.footer-title {
   font-family: var(--font-editorial);
   font-size: 1.35rem;
   font-weight: 900;
-  color: var(--color-pearl-white);
+  color: var(--bg-white);
   margin-bottom: 0.5rem;
 }
 
-.footer-brand-subtitle {
+.footer-sub {
   font-size: 0.9rem;
-  color: var(--color-gold-light);
+  color: var(--gold-light);
   font-weight: 700;
   margin-bottom: 1.2rem;
 }
 
-.footer-editorial-copy {
+.footer-desc {
   font-size: 0.95rem;
-  color: var(--color-text-sublight);
+  color: var(--text-sublight);
   line-height: 1.8;
   max-width: 440px;
 }
 
-.footer-links-segment {
+.footer-links-col {
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
 }
 
-.segment-headline {
+.footer-col-title {
   font-family: var(--font-editorial);
   font-size: 1.05rem;
   font-weight: 800;
-  color: var(--color-gold-champagne);
+  color: var(--gold-champagne);
   margin-bottom: 0.6rem;
 }
 
-.footer-link {
+.footer-item-link {
   font-size: 0.95rem;
-  color: var(--color-text-sublight);
+  color: var(--text-sublight);
 }
 
-.footer-link:hover {
-  color: var(--color-gold-light);
+.footer-item-link:hover {
+  color: var(--gold-light);
 }
 
-.footer-bottom-line {
+.footer-bottom-bar {
   padding-top: 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
@@ -1349,117 +1409,117 @@ img, svg {
   flex-wrap: wrap;
   gap: 1rem;
   font-size: 0.88rem;
-  color: var(--color-text-muted);
+  color: var(--text-muted);
 }
 
 /* ===================================================================
    MOTION & REVEAL ENGINE
    =================================================================== */
-.reveal-init {
+.reveal-elem {
   opacity: 0;
   transform: translateY(25px);
   transition: opacity 0.85s var(--ease-royal), transform 0.85s var(--ease-royal);
 }
 
-.reveal-init.active-revealed {
+.reveal-elem.revealed {
   opacity: 1;
   transform: translateY(0);
 }
 
-.reveal-on-scroll {
+.reveal-scroll {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.85s var(--ease-royal), transform 0.85s var(--ease-royal);
 }
 
-.reveal-on-scroll.active-revealed {
+.reveal-scroll.revealed {
   opacity: 1;
   transform: translateY(0);
 }
 
 /* ===================================================================
-   RESPONSIVE DESIGN (TABLETS & PHONES)
+   RESPONSIVE DESIGN (TABLETS & MOBILE)
    =================================================================== */
 @media (max-width: 1080px) {
-  .overture-layout {
+  .imperial-cover-grid {
     grid-template-columns: 1fr;
     gap: 3.5rem;
   }
 
-  .visual-portrait-chassis {
-    max-width: 500px;
+  .regal-portrait-frame {
+    max-width: 480px;
     margin-inline: auto;
   }
 
-  .manifesto-body-grid,
-  .chamber-grid,
-  .lounge-suite-grid,
-  .footer-layout {
+  .credo-content-grid,
+  .suite-editorial-grid,
+  .vip-suite-grid,
+  .footer-columns-grid {
     grid-template-columns: 1fr;
     gap: 3.5rem;
   }
 
-  .manifesto-pillars-list {
+  .credo-pillars-stack {
     border-right: none;
     padding-right: 0;
   }
 
-  .chapter-feature {
+  .pane-grid {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
 
-  .chapter-reverse {
-    direction: rtl;
+  .showcase-panes-deck {
+    padding: 2.4rem 1.8rem;
   }
 
-  .journey-track-grid {
+  .journey-steps-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
-  .master-nav {
+  .royal-nav {
     display: none;
   }
 
-  .header-direct-phone {
+  .royal-phone-link {
     display: none;
   }
 
-  .overture-headline {
+  .imperial-headline {
     font-size: 2.1rem;
   }
 
-  .manifesto-card-grand {
+  .credo-grand-card {
     padding: 2.4rem 1.6rem;
   }
 
-  .chamber-cards-array {
+  .suite-quad-cards {
     grid-template-columns: 1fr;
   }
 
-  .journey-track-grid {
+  .journey-steps-grid {
     grid-template-columns: 1fr;
   }
 
-  .form-group-duo {
+  .form-row-duo {
     grid-template-columns: 1fr;
     gap: 0;
   }
 
-  .lounge-form-card,
-  .lounge-info-card {
+  .vip-form-card,
+  .vip-info-card {
     padding: 2.2rem 1.6rem;
   }
 
-  .overture-metrics-bar {
+  .cover-telemetry-row {
     flex-direction: column;
     align-items: flex-start;
     gap: 1.2rem;
   }
 
-  .micro-metric-divider {
+  .telemetry-sep {
     display: none;
   }
 }
