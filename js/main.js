@@ -1,58 +1,59 @@
 /**
- * عيادة د. هاني محمد عفيفي | استشاري أمراض وجراحة العظام والمفاصل
- * Dr. Hany Mohamed Afify | Ultra-Luxury VIP Concierge Orthopedic Brand
- * Clean-Slate Luxury Motion & Showcase Engine
+ * عيادة د. هاني محمد عفيفي | استشاري جراحة العظام والمفاصل والعمود الفقري
+ * Dr. Hany Mohamed Afify | Orthopedic Surgery Consultant
+ * Living Medical Universe — Interactive Engine
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  const CLINIC_WHATSAPP = '20133273922'; // 0133273922
+  const CLINIC_WHATSAPP = '20133273922'; // Official Clinic Line: 0133273922
 
   // ===================================================================
-  // 1. TOP SCROLL GOLD TRACER
+  // 1. TOP SCROLL CYAN TRACER
   // ===================================================================
-  const scrollTracer = document.getElementById('scrollTracer');
+  const cyanTracer = document.getElementById('cyanTracer');
 
   function updateScrollProgress() {
-    if (!scrollTracer) return;
+    if (!cyanTracer) return;
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
     const progress = docHeight > 0 ? scrollTop / docHeight : 0;
-    scrollTracer.style.transform = `scaleX(${progress})`;
+    cyanTracer.style.transform = `scaleX(${progress})`;
   }
 
   window.addEventListener('scroll', updateScrollProgress, { passive: true });
+  updateScrollProgress();
 
   // ===================================================================
-  // 2. STICKY ROYAL HEADER & SCROLLSPY
+  // 2. TECH HEADER ELEVATION & SCROLLSPY
   // ===================================================================
-  const royalHeader = document.getElementById('royalHeader');
-  const royalNavLinks = document.querySelectorAll('.royal-nav-link');
-  const monitoredSections = document.querySelectorAll('section[id]');
+  const techHeader = document.getElementById('techHeader');
+  const navLinks = document.querySelectorAll('.tech-nav-link');
+  const sections = document.querySelectorAll('section[id]');
 
   function handleHeaderAndScrollspy() {
     const scrollPos = window.scrollY;
 
-    // Header elevation on scroll
-    if (scrollPos > 35) {
-      royalHeader?.classList.add('scrolled');
+    // Header elevation
+    if (scrollPos > 30) {
+      techHeader?.classList.add('scrolled');
     } else {
-      royalHeader?.classList.remove('scrolled');
+      techHeader?.classList.remove('scrolled');
     }
 
-    // Scrollspy active anchor
-    let activeSectionId = '';
-    monitoredSections.forEach(section => {
-      const top = section.offsetTop - 120;
-      const height = section.offsetHeight;
+    // Active Section Tracking
+    let currentId = '';
+    sections.forEach((sec) => {
+      const top = sec.offsetTop - 150;
+      const height = sec.offsetHeight;
       if (scrollPos >= top && scrollPos < top + height) {
-        activeSectionId = section.getAttribute('id');
+        currentId = sec.getAttribute('id');
       }
     });
 
-    if (activeSectionId) {
-      royalNavLinks.forEach(link => {
+    if (currentId) {
+      navLinks.forEach((link) => {
         link.classList.remove('active');
-        if (link.getAttribute('href') === `#${activeSectionId}`) {
+        if (link.getAttribute('href') === `#${currentId}`) {
           link.classList.add('active');
         }
       });
@@ -60,116 +61,198 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   window.addEventListener('scroll', handleHeaderAndScrollspy, { passive: true });
+  handleHeaderAndScrollspy();
 
   // ===================================================================
-  // 3. CURATED LUXURY SPECIALTY SHOWCASE (TABS SWITCHER)
+  // 3. LIVING PARTICLE CONSTELLATION CANVAS
   // ===================================================================
-  const tabButtons = document.querySelectorAll('.showcase-tab-btn');
-  const showcasePanes = document.querySelectorAll('.showcase-pane');
+  const canvas = document.getElementById('particleCanvas');
+  if (canvas) {
+    const ctx = canvas.getContext('2d');
+    let width = (canvas.width = window.innerWidth);
+    let height = (canvas.height = window.innerHeight);
 
-  if (tabButtons.length > 0 && showcasePanes.length > 0) {
-    tabButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const targetId = btn.getAttribute('data-target');
-        if (!targetId) return;
+    // Particle nodes configuration
+    const particleCount = Math.min(Math.floor((width * height) / 18000), 55);
+    const particles = [];
 
-        const targetPane = document.getElementById(targetId);
-        if (!targetPane) return;
+    class Particle {
+      constructor() {
+        this.reset();
+      }
 
-        // Update active tab button
-        tabButtons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+      reset() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.vx = (Math.random() - 0.5) * 0.45;
+        this.vy = (Math.random() - 0.5) * 0.45;
+        this.radius = Math.random() * 1.8 + 0.8;
+        this.alpha = Math.random() * 0.5 + 0.2;
+        // Random cyan or subtle gold accent
+        this.color = Math.random() > 0.8 ? '212, 175, 55' : '35, 231, 255';
+      }
 
-        // Switch active pane smoothly
-        showcasePanes.forEach(pane => {
-          pane.classList.remove('active-pane');
-        });
-        targetPane.classList.add('active-pane');
-      });
-    });
-  }
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
 
-  // ===================================================================
-  // 4. MOTION & REVEAL CADENCE
-  // ===================================================================
-  // Staggered entrance for hero elements
-  const initElements = document.querySelectorAll('.reveal-elem');
-  initElements.forEach((el, index) => {
-    setTimeout(() => {
-      el.classList.add('revealed');
-    }, 130 * index);
-  });
+        if (this.x < 0 || this.x > width) this.vx *= -1;
+        if (this.y < 0 || this.y > height) this.vy *= -1;
+      }
 
-  // IntersectionObserver for scroll-triggered elements
-  const scrollElements = document.querySelectorAll('.reveal-scroll');
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${this.color}, ${this.alpha})`;
+        ctx.shadowBlur = 8;
+        ctx.shadowColor = `rgba(${this.color}, 0.5)`;
+        ctx.fill();
+        ctx.shadowBlur = 0;
+      }
+    }
 
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver((entries, obs) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('revealed');
-          obs.unobserve(entry.target);
+    for (let i = 0; i < particleCount; i++) {
+      particles.push(new Particle());
+    }
+
+    function connectParticles() {
+      const maxDistance = 110;
+      for (let a = 0; a < particles.length; a++) {
+        for (let b = a + 1; b < particles.length; b++) {
+          const dx = particles[a].x - particles[b].x;
+          const dy = particles[a].y - particles[b].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+
+          if (dist < maxDistance) {
+            const lineAlpha = (1 - dist / maxDistance) * 0.14;
+            ctx.beginPath();
+            ctx.strokeStyle = `rgba(35, 231, 255, ${lineAlpha})`;
+            ctx.lineWidth = 0.75;
+            ctx.moveTo(particles[a].x, particles[a].y);
+            ctx.lineTo(particles[b].x, particles[b].y);
+            ctx.stroke();
+          }
         }
-      });
-    }, {
-      root: null,
-      threshold: 0.1,
-      rootMargin: '0px 0px -40px 0px'
-    });
+      }
+    }
 
-    scrollElements.forEach(el => observer.observe(el));
-  } else {
-    scrollElements.forEach(el => el.classList.add('revealed'));
+    let animationId;
+    function renderLoop() {
+      ctx.clearRect(0, 0, width, height);
+      particles.forEach((p) => {
+        p.update();
+        p.draw();
+      });
+      connectParticles();
+      animationId = requestAnimationFrame(renderLoop);
+    }
+    renderLoop();
+
+    // Resize handler
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+      }, 150);
+    });
   }
 
   // ===================================================================
-  // 5. SUBTLE 3D TILT ON PORTRAIT CHASSIS (DESKTOP)
+  // 4. SUBTLE 3D PARALLAX TILT ON DOCTOR CHASSIS (DESKTOP)
   // ===================================================================
-  const heroSection = document.getElementById('hero');
-  const portraitFrame = document.getElementById('portraitFrame');
+  const stage = document.getElementById('heroHologramStage');
+  const chassis = document.getElementById('doctorChassis');
 
-  if (heroSection && portraitFrame && window.matchMedia('(min-width: 1024px)').matches) {
-    heroSection.addEventListener('mousemove', (e) => {
-      const rect = heroSection.getBoundingClientRect();
+  if (stage && chassis && window.matchMedia('(min-width: 1024px)').matches) {
+    stage.addEventListener('mousemove', (e) => {
+      const rect = stage.getBoundingClientRect();
       const x = (e.clientX - rect.left) / rect.width - 0.5;
       const y = (e.clientY - rect.top) / rect.height - 0.5;
 
-      portraitFrame.style.transform = `perspective(1200px) rotateY(${x * -5}deg) rotateX(${y * 5}deg) translateY(-3px)`;
+      chassis.style.transform = `perspective(1000px) rotateY(${x * 8}deg) rotateX(${y * -8}deg) translateY(-4px)`;
     });
 
-    heroSection.addEventListener('mouseleave', () => {
-      portraitFrame.style.transform = 'perspective(1200px) rotateY(0deg) rotateX(0deg) translateY(0)';
+    stage.addEventListener('mouseleave', () => {
+      chassis.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg) translateY(0)';
     });
   }
 
   // ===================================================================
-  // 6. VIP CONCIERGE APPOINTMENT & WHATSAPP GENERATION
+  // 5. SPECIALTY MODULE SELECTION TO CONCIERGE FORM
   // ===================================================================
-  const dateInput = document.getElementById('f_date');
+  const moduleCards = document.querySelectorAll('.module-card');
+  const serviceSelect = document.getElementById('pt_service');
+  const conciergeCard = document.querySelector('.concierge-glass-card');
+
+  // Mapping data-module to select option text
+  const moduleToServiceMap = {
+    joints: 'المفاصل الصناعية',
+    arthroscopy: 'مناظير المفاصل والرباط الصليبي',
+    cartilage: 'علاج الخشونة والطب التجديدي',
+    spine: 'جراحات العمود الفقري',
+    trauma: 'الكسور المعقدة والترميم',
+    pediatric: 'عظام الأطفال'
+  };
+
+  moduleCards.forEach((card) => {
+    card.addEventListener('click', (e) => {
+      const modKey = card.getAttribute('data-module');
+      if (modKey && moduleToServiceMap[modKey] && serviceSelect) {
+        serviceSelect.value = moduleToServiceMap[modKey];
+      }
+
+      // Smooth scroll to booking suite
+      const bookingSec = document.getElementById('concierge-booking');
+      if (bookingSec) {
+        bookingSec.scrollIntoView({ behavior: 'smooth' });
+
+        // Highlight form card with cyan pulse
+        if (conciergeCard) {
+          conciergeCard.style.boxShadow = '0 0 45px rgba(35, 231, 255, 0.4)';
+          conciergeCard.style.borderColor = 'rgba(35, 231, 255, 0.6)';
+          setTimeout(() => {
+            conciergeCard.style.boxShadow = '';
+            conciergeCard.style.borderColor = '';
+          }, 1800);
+        }
+      }
+    });
+  });
+
+  // ===================================================================
+  // 6. DATE RESTRICTION TO TODAY/FUTURE
+  // ===================================================================
+  const dateInput = document.getElementById('pt_date');
   if (dateInput) {
     const today = new Date().toISOString().split('T')[0];
     dateInput.setAttribute('min', today);
   }
 
-  const appointmentForm = document.getElementById('vipAppointmentForm');
-  if (appointmentForm) {
-    appointmentForm.addEventListener('submit', (e) => {
+  // ===================================================================
+  // 7. VIP CONCIERGE BOOKING & WHATSAPP DISPATCH
+  // ===================================================================
+  const bookingForm = document.getElementById('cyberBookingForm');
+
+  if (bookingForm) {
+    bookingForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      const name = document.getElementById('f_name')?.value.trim();
-      const phone = document.getElementById('f_phone')?.value.trim();
-      const service = document.getElementById('f_service')?.value || 'استشارة عامة في جراحة العظام والمفاصل';
-      const date = document.getElementById('f_date')?.value || 'أقرب موعد متاح';
-      const notes = document.getElementById('f_notes')?.value.trim() || 'لا توجد ملاحظات إضافية';
+      const name = document.getElementById('pt_name')?.value.trim();
+      const phone = document.getElementById('pt_phone')?.value.trim();
+      const service = document.getElementById('pt_service')?.value || 'استشارة عامة في جراحة العظام والمفاصل';
+      const date = document.getElementById('pt_date')?.value || 'أقرب موعد متاح';
+      const notes = document.getElementById('pt_notes')?.value.trim() || 'لا توجد ملاحظات إضافية';
 
       if (!name || !phone) {
-        alert('يرجى ملء اسم المريض ورقم الهاتف لتأكيد الموعد.');
+        alert('يرجى كتابة الاسم ورقم الهاتف للتنسيق الطبي وحجز الموعد.');
         return;
       }
 
-      // Format WhatsApp Arabic Message
+      // Format WhatsApp Message in Arabic
       const message = 
-`*طلب حجز موعد استشاري خاص — عيادة د. هاني محمد عفيفي*
+`*طلب استشارة طبية — عيادة د. هاني محمد عفيفي*
 ---------------------------------------
 👤 *اسم المريض:* ${name}
 📞 *رقم الهاتف:* ${phone}
@@ -183,7 +266,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Open WhatsApp in new tab
       window.open(whatsappUrl, '_blank');
-      appointmentForm.reset();
+      bookingForm.reset();
+    });
+  }
+
+  // ===================================================================
+  // 8. SCROLL REVEAL (INTERSECTION OBSERVER)
+  // ===================================================================
+  const revealTargets = document.querySelectorAll(
+    '.module-card, .lab-grid-layout, .stories-card-panel, .location-card-panel, .concierge-glass-card'
+  );
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -40px 0px'
+      }
+    );
+
+    revealTargets.forEach((el) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(22px)';
+      el.style.transition = 'opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1)';
+      observer.observe(el);
     });
   }
 });
