@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===================================================================
   // 5. SPECIALTY MODULE SELECTION TO CONCIERGE FORM
   // ===================================================================
-  const moduleCards = document.querySelectorAll('.module-card');
+  const moduleCards = document.querySelectorAll('.module-card, .specialty-showcase-card');
   const serviceSelect = document.getElementById('pt_service');
   const conciergeCard = document.querySelector('.concierge-glass-card');
 
@@ -190,10 +190,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const moduleToServiceMap = {
     joints: 'المفاصل الصناعية',
     arthroscopy: 'مناظير المفاصل والرباط الصليبي',
-    cartilage: 'علاج الخشونة والطب التجديدي',
     spine: 'جراحات العمود الفقري',
-    trauma: 'الكسور المعقدة والترميم',
-    pediatric: 'عظام الأطفال'
+    ilizarov: 'جهاز الإليزاروف وتطويل العظام',
+    cartilage: 'علاج الخشونة والطب التجديدي',
+    pediatric: 'عظام الأطفال',
+    trauma: 'الكسور المعقدة والترميم'
   };
 
   moduleCards.forEach((card) => {
@@ -274,7 +275,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 8. SCROLL REVEAL (INTERSECTION OBSERVER)
   // ===================================================================
   const revealTargets = document.querySelectorAll(
-    '.module-card, .lab-grid-layout, .stories-card-panel, .location-card-panel, .concierge-glass-card'
+    '.about-grid-layout, .pillar-capsule, .specialty-showcase-card, .lab-grid-layout, .stories-card-panel, .location-card-panel, .concierge-glass-card'
   );
 
   if ('IntersectionObserver' in window) {
